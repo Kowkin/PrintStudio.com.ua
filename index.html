@@ -14,12 +14,15 @@
     <link rel="stylesheet" type='text/css' href="css/hover.css">
     <link rel="stylesheet" type='text/css' href="css/bootstrap.css">
     <link rel='stylesheet' type='text/css' href='css/onepage-scroll.css'>
+    <link rel="stylesheet" type="text/css" href="css/owl.carousel.css">
     <!--    JS-->
     <script type="text/javascript" src="js/jquery2.2.0.js"></script>
     <script type="text/javascript" src="js/bootstrap/bootstrap.min.js"></script>
     <script type="text/javascript" src="js/modernizr.js"></script>
     <script type="text/javascript" src="js/jquery.onepage-scroll.js"></script>
+    <script type="text/javascript" src="js/owl.carousel.js"></script>
     <script>
+        //        ONEPAGESCROLL
         $(document).ready(function () {
             $('.main').onepage_scroll({
                 sectionContainer: "section",
@@ -27,12 +30,8 @@
                 animationTime: 1000,
                 pagination: true,
                 updateURL: false,
-                //   beforeMove: function(index) {},  
-                //   afterMove: function(index) {},   
                 loop: true,
                 keyboard: true,
-//                responsiveFallback: false,
-                //              direction: "vertical" 
             });
             $('#moveToMain').click(function () {
                 $(".main").moveTo(1);
@@ -50,115 +49,132 @@
                 $(".main").moveTo(5);
             });
         });
+        //        SLIDER 
+        $('.owl-carousel').owlCarousel({
+            loop: true,
+            margin: 10,
+            nav: true,
+            responsive: {
+                0: {
+                    items: 1
+                },
+                600: {
+                    items: 3
+                },
+                1000: {
+                    items: 5
+                }
+            }
+        })
     </script>
 </head>
 
 <body>
-    <div class="wrapper">
-        <div class="main">
-            <!--        MAIN-->
-            <section id="main" class="main-section">
+    <div class="main">
+        <!--        MAIN-->
+        <section id="main" class="main-section">
 
-                <div class="bg-video">
-                    <video preload="auto" autoplay="autoplay" loop="loop" poster="images/print.jpg">
-                        <source src="images/print.webm" type="video/webm"></source>
-                        <source src="images/print.mp4" type="video/mp4"></source>
-                    </video>
-                </div>
+            <div class="bg-video">
+                <video preload="auto" autoplay="autoplay" loop="loop" poster="images/print.jpg">
+                    <source src="images/print.webm" type="video/webm"></source>
+                    <source src="images/print.mp4" type="video/mp4"></source>
+                </video>
+            </div>
 
-                <div class="container center header">
-                    <div class="row">
-                        <div class="logo col-md-2 col-md-offset-5 text-center">
-                            <img src="images/logo.png" alt="">
-                            <div class="gap-30"></div>
-                        </div>
-                        <nav class="navbar scrollspy col-md-11 col-md-push-1">
-                            <div class="container">
-                                <!-- Brand and toggle get grouped for better mobile display -->
-                                <div class="navbar-header">
-                                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                                        <span class="sr-only">Toggle navigation</span>
-                                        <span class="icon-bar" style="background-color:white"></span>
-                                        <span class="icon-bar" style="background-color:white"></span>
-                                        <span class="icon-bar" style="background-color:white"></span>
-                                    </button>
-                                </div>
-                                <!-- Collect the nav links, forms, and other content for toggling -->
-                                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                                    <ul class="nav navbar-nav main-nav">
-                                        <li class="page-scroll hvr-underline-from-left"><a id="moveToMain">Главная</a></li>
-                                        <li class="page-scroll hvr-underline-from-left"><a id="moveToServices">Услуги</a></li>
-                                        <li class="page-scroll hvr-underline-from-left"><a id="moveToProducts">Продукты</a></li>
-                                        <li class="page-scroll hvr-underline-from-left"><a id="moveToPartners">Партнеры</a></li>
-                                        <li class="page-scroll hvr-underline-from-left"><a id="moveToContacts">Контакты</a></li>
-                                    </ul>
-                                </div>
-                                <!-- /.navbar-collapse -->
-                            </div>
-                            <!-- /.container-fluid -->
-                        </nav>
-                        <!--                END NAV-->
+            <div class="container center header">
+                <div class="row">
+                    <div class="logo col-md-2 col-md-offset-5 text-center">
+                        <img src="images/logo.png" alt="">
                         <div class="gap-30"></div>
-                        <div class="col-md-6 col-md-offset-3">
-                            <h1 style="color:white;"><span style="font-weight:900;">Print</span><span style="font-weight:100;">Studio</span></h1>
-                            <hr>
-                            <h2>СОВРЕМЕННАЯ ТИПОГРАФИЯ</h2>
-                            <h3>ПОЛНЫЙ СПЕКТР ПОЛИГРАФИЧЕСКИХ УСЛУГ</h3>
+                    </div>
+                    <nav class="navbar scrollspy col-md-11 col-md-push-1">
+                        <div class="container">
+                            <!-- Brand and toggle get grouped for better mobile display -->
+                            <div class="navbar-header">
+                                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                                    <span class="sr-only">Toggle navigation</span>
+                                    <span class="icon-bar" style="background-color:white"></span>
+                                    <span class="icon-bar" style="background-color:white"></span>
+                                    <span class="icon-bar" style="background-color:white"></span>
+                                </button>
+                            </div>
+                            <!-- Collect the nav links, forms, and other content for toggling -->
+                            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                                <ul class="nav navbar-nav main-nav">
+                                    <li class="page-scroll hvr-underline-from-left"><a id="moveToMain">Главная</a></li>
+                                    <li class="page-scroll hvr-underline-from-left"><a id="moveToServices">Услуги</a></li>
+                                    <li class="page-scroll hvr-underline-from-left"><a id="moveToProducts">Продукты</a></li>
+                                    <li class="page-scroll hvr-underline-from-left"><a id="moveToPartners">Партнеры</a></li>
+                                    <li class="page-scroll hvr-underline-from-left"><a id="moveToContacts">Контакты</a></li>
+                                </ul>
+                            </div>
+                            <!-- /.navbar-collapse -->
+                        </div>
+                        <!-- /.container-fluid -->
+                    </nav>
+                    <!--                END NAV-->
+                    <div class="gap-30"></div>
+                    <div class="col-md-6 col-md-offset-3">
+                        <h1 style="color:white;"><span style="font-weight:900;">Print</span><span style="font-weight:100;">Studio</span></h1>
+                        <hr>
+                        <h2>СОВРЕМЕННАЯ ТИПОГРАФИЯ</h2>
+                        <h3>ПОЛНЫЙ СПЕКТР ПОЛИГРАФИЧЕСКИХ УСЛУГ</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--           END MAIN-->
+
+        <!--           SERVICE-->
+        <section id="service" class="services-section">
+            <div class="container center">
+                <div class="row">
+                    <div class="col-md-6 col-xs-12 img1 hvr-underline-from-left">
+                        <div class="service-inside-center">
+                            <h1 class="col-md-12 text-center">картонная <br>упаковка</h1>
+                            <hr style="border: 4px solid #1cbbb4; min-height: 0px;" class="col-md-" />
+                            <h4 class="col-md-12 text-center">подробнее</h4>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-xs-12 img2 hvr-underline-from-left">
+                        <div class="service-inside-center">
+                            <h1 class="col-md-12 text-center">календари</h1>
+                            <hr style="border: 4px solid #1cbbb4; min-height: 0px;" class="col-md-2 col-md-offset-5" />
+                            <h4 class="col-md-12 text-center">подробнее</h4>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="row">
+
+                    <div class="col-md-6 col-xs-12 img3 hvr-underline-from-left">
+                        <div class="service-inside-center">
+                            <h1 class="col-md-12 text-center">рекламно-<br>информационная<br>продукция</h1>
+                            <hr style="border: 4px solid #1cbbb4; min-height: 0px;" class="col-md-2 col-md-offset-5" />
+                            <h4 class="col-md-12 text-center">подробнее</h4>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-xs-12 img4 hvr-underline-from-left">
+                        <div class="service-inside-center">
+                            <h1 class="col-md-12 text-center">другое</h1>
+                            <hr style="border: 4px solid #1cbbb4; min-height: 0px;" class="col-md-2 col-md-offset-5" />
+                            <h4 class="col-md-12 text-center">подробнее</h4>
                         </div>
                     </div>
                 </div>
-            </section>
-            <!--           END MAIN-->
+            </div>
+        </section>
 
-            <!--           SERVICE-->
-            <section id="service" class="services-section">
-                <div class="container center">
-                    <div class="row">
-                        <div class="col-md-6 col-xs-12 img1 hvr-underline-from-left">
-                            <div class="service-inside-center">
-                                <h1 class="col-md-12 text-center">картонная <br>упаковка</h1>
-                                <hr style="border: 4px solid #1cbbb4; min-height: 0px;" class="col-md-" />
-                                <h4 class="col-md-12 text-center">подробнее</h4>
-                            </div>
-                        </div>
+        <!--           PRODUCTS-->
+        <section id="products" class="products-section">
+            <!--
 
-                        <div class="col-md-6 col-xs-12 img2 hvr-underline-from-left">
-                            <div class="service-inside-center">
-                                <h1 class="col-md-12 text-center">календари</h1>
-                                <hr style="border: 4px solid #1cbbb4; min-height: 0px;" class="col-md-2 col-md-offset-5" />
-                                <h4 class="col-md-12 text-center">подробнее</h4>
-                            </div>
-                        </div>
-
-                    </div>
-
-                    <div class="row">
-
-                        <div class="col-md-6 col-xs-12 img3 hvr-underline-from-left">
-                            <div class="service-inside-center">
-                                <h1 class="col-md-12 text-center">рекламно-<br>информационная<br>продукция</h1>
-                                <hr style="border: 4px solid #1cbbb4; min-height: 0px;" class="col-md-2 col-md-offset-5" />
-                                <h4 class="col-md-12 text-center">подробнее</h4>
-                            </div>
-                        </div>
-
-                        <div class="col-md-6 col-xs-12 img4 hvr-underline-from-left">
-                            <div class="service-inside-center">
-                                <h1 class="col-md-12 text-center">другое</h1>
-                                <hr style="border: 4px solid #1cbbb4; min-height: 0px;" class="col-md-2 col-md-offset-5" />
-                                <h4 class="col-md-12 text-center">подробнее</h4>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!--           PRODUCTS-->
-            <section id="products" class="products-section">
-                <!--
                 <div id="header-carousel" class="carousel slide" data-ride="header-carousel-ride">
                     <div class="carousel-inner">
-                        <div class="item" style="background-image: url('http://www.invisioncommunity.co.uk/wp-content/uploads/2014/01/Need-for-Speed-Rivals-Screenshot-05.jpg');">
+                        <div class="item" style="background-image: url('images/sliderleft.png');">
                             <div class="title">Need for Speed</div>
                             <div class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam tincidunt purus eget justo dignissim euismod. Donec non quam commodo, consequat orci nec...</div>
                             <div class="more">Read More</div>
@@ -169,7 +185,7 @@
                             <div class="more">Read More</div>
                         </div>
                     </div>
-                     Controls 
+                     Controls
                     <a class="left carousel-control" href="#header-carousel" role="button" data-slide="prev">
                         <i class="fa fa-chevron-left fa-3x"></i>
                     </a>
@@ -178,22 +194,33 @@
                     </a>
                 </div>
 -->
-                <div class="container-fluid center">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <img src="images/sliderleft.png" alt="">
-                            <img src="images/slidermid.png" alt="">
-                            <img src="images/sliderright.png" alt="">
 
-                        </div>
+            <div class="container-fluid center">
+                <div class="row">
+                    <div class="col-md-2">
+                        <img src="images/sliderleft.jpg" alt="">
                     </div>
+                    <div class="col-md-4">
+                        <h3>Картонная упаковка любой сложности</h3>
+                        <p>Данный вид полиграфической продукции может иметь большое количество комбинаций технических параметров, поэтому его сложно стандартизировать по материалам, размерам и другим параметрам. Исходя из этого, мы рекомендуем просчитывать стоимость продукции индивидуально, в соответствии с Вашими пожеланиями. Мы не продаем готовую продукцию со склада! Мы производим продукцию, в соответствии с ее техническими параметрами, индивидуально для каждого Партнера! Для просчета стоимости заказа необходимо указать следующие данные:</p>
+                        <ul>
+                            <li>Формат</li>
+                            <li>Красочность</li>
+                            <li>Плотность и вид картона</li>
+                            <li>Дополнительная отделка</li>
+                            <li>Тираж</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4"><img src="images/slidermid.jpg" alt=""></div>
+                    <div class="col-md-2"><img src="images/sliderright.jpg" alt=""></div>
                 </div>
-            </section>
+            </div>
+        </section>
 
 
-            <!--        MAIN-->
-        </div>
+        <!--        MAIN-->
     </div>
+
     <script src="js/main.js"></script>
 </body>
 
