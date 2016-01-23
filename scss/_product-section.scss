@@ -2,9 +2,9 @@
 //    height: 100%;
     padding: 0!important;
 }
-.products-section img{
-//    max-width: 100%;
-    height: inherit;
+.products-section > .img_1{
+    background: url(/images/sliderleft.jpg) no-repeat center;
+    background-size: cover;
 }
 
 //SLIDER
@@ -74,3 +74,20 @@
     -o-transition: all 0.5s ease;
     transition: all 0.5s ease;
 }
+
+//MEDIA
+
+/* Small devices (tablets, 768px and up) */
+
+@media (min-width: 768px) {
+
+}
+
+/* Medium devices (desktops, 992px and up) */
+
+@media (min-width: 992px) {}
+
+
+/* Large devices (large desktops, 1200px and up) */
+
+@media (min-width: 1200px) {}

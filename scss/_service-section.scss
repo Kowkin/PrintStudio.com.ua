@@ -1,21 +1,22 @@
+.container .services-section {
+    width: 700px!important;
+}
 
-.container .services-section{
- width: 700px!important;
+.services-section {
+    color: white;
+    background: linear-gradient(#000 75%, #29b0aa 75%,#29b0aa 76.5%, #fff 15%);
 }
-.services-section{
-    color:white;
-}
+
 .services-section .col-md-6 {
     padding: 0;
-
 }
 
 .services .col-md-6 {
-    & h1{
+    & h1 {
         font-size: 28pt;
         text-transform: uppercase;
     }
-    & h4{
+    & h4 {
         font-size: 12pt;
         text-transform: uppercase;
     }
@@ -31,18 +32,39 @@
     height: 377px;
     width: 100%;
 }
+
 .img2 {
     background: url(/images/offset.png);
     height: 377px;
     width: 100%;
 }
+
 .img3 {
     background: url(/images/etc.png);
     height: 377px;
     width: 100%;
 }
+
 .img4 {
     background: url(/images/etc.png);
     height: 377px;
     width: 100%;
 }
+
+
+//MEDIA
+
+/* Small devices (tablets, 768px and up) */
+
+@media (min-width: 768px) {
+
+}
+
+/* Medium devices (desktops, 992px and up) */
+
+@media (min-width: 992px) {}
+
+
+/* Large devices (large desktops, 1200px and up) */
+
+@media (min-width: 1200px) {}

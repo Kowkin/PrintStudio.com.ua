@@ -1,0 +1,49 @@
+@import "options";
+.partners-section {
+    background: white!important;
+    img {
+        height: 74px;
+        width: 66px;
+    }
+    .col-md-2 {
+        padding: 60px;
+    }
+    hr {
+        margin-top: 40px;
+        margin-bottom: 40px;
+        background: $activeColor;
+        height: 5px;
+        width: 15%;
+    }
+}
+
+.partners-bord-top {
+    border-bottom: 4px solid #ebebeb;
+    border-right: 4px solid #ebebeb;
+}
+
+.partners-bord-bot {
+    border-right: 4px solid #ebebeb;
+}
+
+//MEDIA
+
+/* Small devices (tablets, 768px and up) */
+
+@media (min-width: 768px) {
+    .partners-bord-bot {
+        border: none;
+    }
+    .partners-bord-top {
+        border: none;
+    }
+}
+
+/* Medium devices (desktops, 992px and up) */
+
+@media (min-width: 992px) {}
+
+
+/* Large devices (large desktops, 1200px and up) */
+
+@media (min-width: 1200px) {}
