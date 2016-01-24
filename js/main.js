@@ -23,46 +23,41 @@
 //});
 
 //animated-MENU
-jQuery(document).ready(function($){
-	//open menu
-	$('.cd-menu-trigger').on('click', function(event){
-		event.preventDefault();
-		$('#cd-main-content').addClass('move-out');
-		$('#main-nav$').addClass('is-visible');
-		$('.cd-shadow-layer').addClass('is-visible');
-	});
-	//close menu
-	$('.cd-close-menu').on('click', function(event){
-		event.preventDefault();
-		$('#cd-main-content').removeClass('move-out');
-		$('#main-nav').removeClass('is-visible');
-		$('.cd-shadow-layer').removeClass('is-visible');
-	});
+jQuery(document).ready(function(){
+	if( $('.cd-stretchy-nav').length > 0 ) {
+		var stretchyNavs = $('.cd-stretchy-nav');
+		
+		stretchyNavs.each(function(){
+			var stretchyNav = $(this),
+				stretchyNavTrigger = stretchyNav.find('.cd-nav-trigger');
+			
+			stretchyNavTrigger.on('click', function(event){
+				event.preventDefault();
+				stretchyNav.toggleClass('nav-is-visible');
+			});
+		});
 
-	//clipped image - blur effect
-	set_clip_property();
-	$(window).on('resize', function(){
-		set_clip_property();
-	});
-
-	function set_clip_property() {
-		var $header_height = $('.cd-header').height(),
-			$window_height = $(window).height(),
-			$header_top = $window_height - $header_height,
-			$window_width = $(window).width();
-		$('.cd-blurred-bg').css('clip', 'rect('+$header_top+'px, '+$window_width+'px, '+$window_height+'px, 0px)');
+		$(document).on('click', function(event){
+			( !$(event.target).is('.cd-nav-trigger') && !$(event.target).is('.cd-nav-trigger span') ) && stretchyNavs.removeClass('nav-is-visible');
+		});
 	}
 });
-// jQuery for page scrolling feature - requires jQuery Easing plugin
-$(function() {
-    $('body').on('click', '.page-scroll a', function(event) {
-        var $anchor = $(this);
-        $('html, body').stop().animate({
-            scrollTop: $($anchor.attr('href')).offset().top
-        }, 950, 'easeInOutExpo');
-        event.preventDefault();
-    });
-});
+//jQuery(document).ready(function($){
+//	//open menu
+//	$('.cd-menu-trigger').on('click', function(event){
+//		event.preventDefault();
+//		$('#main-nav').addClass('is-visible');
+//		$('.cd-shadow-layer').addClass('is-visible');
+//	});
+//	//close menu
+//	$('.cd-close-menu').on('click', function(event){
+//		event.preventDefault();
+//		$('#main-nav').removeClass('is-visible');
+//		$('.cd-shadow-layer').removeClass('is-visible');
+//	});
+//});
+
+
 
 // Highlight the top nav as scrolling occurs
 $('body').scrollspy({

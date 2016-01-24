@@ -409,6 +409,16 @@ html {
   font-size: 0.875rem;
 }
 
+.cd-menu-trigger .icon-bar {
+  width: 35px;
+  height: 4px;
+  border-radius: 1px;
+}
+
+.cd-menu-trigger .icon-bar + .icon-bar {
+  margin-top: 10px;
+}
+
 .cd-menu-trigger span {
   /* hamburger icon */
   position: relative;
@@ -425,7 +435,8 @@ html {
   transform: translateY(-2px);
 }
 
-.cd-menu-trigger span::before, .cd-menu-trigger span::after {
+.cd-menu-trigger span::before,
+.cd-menu-trigger span::after {
   content: '';
   display: inline-block;
   position: absolute;
@@ -470,46 +481,21 @@ html {
 }
 
 #main-nav {
-  position: fixed;
-  top: 25%;
-  left: 25%;
-  width: 50%;
-  height: 50%;
+  position: relative;
+  top: 0;
+  left: 35%;
+  width: 30%;
+  height: 82%;
   background: #eeecf5;
   /* Force Hardware Acceleration in WebKit */
   -webkit-transform: translateZ(0);
   -webkit-backface-visibility: hidden;
   /* we move this element off the canvas */
-  -webkit-transform: translateY(-150%);
-  -moz-transform: translateY(-150%);
-  -ms-transform: translateY(-150%);
-  -o-transform: translateY(-150%);
-  transform: translateY(-150%);
-  -webkit-transition-property: -webkit-transform;
-  -moz-transition-property: -moz-transform;
-  transition-property: transform;
-  -webkit-transition-duration: 0.5s;
-  -moz-transition-duration: 0.5s;
-  transition-duration: 0.5s;
-  z-index: 3;
-}
-
-#main-nav2 {
-  position: fixed;
-  top: 125%;
-  left: 125%;
-  width: 50%;
-  height: 50%;
-  background: #eeecf5;
-  /* Force Hardware Acceleration in WebKit */
-  -webkit-transform: translateZ(0);
-  -webkit-backface-visibility: hidden;
-  /* we move this element off the canvas */
-  -webkit-transform: translateY(-250%);
-  -moz-transform: translateY(-250%);
-  -ms-transform: translateY(-250%);
-  -o-transform: translateY(-250%);
-  transform: translateY(-250%);
+  -webkit-transform: translateY(-111%);
+  -moz-transform: translateY(-111%);
+  -ms-transform: translateY(-111%);
+  -o-transform: translateY(-111%);
+  transform: translateY(-111%);
   -webkit-transition-property: -webkit-transform;
   -moz-transition-property: -moz-transform;
   transition-property: transform;
@@ -574,7 +560,8 @@ html {
   white-space: nowrap;
 }
 
-#main-nav .cd-close-menu::before, #main-nav .cd-close-menu::after {
+#main-nav .cd-close-menu::before,
+#main-nav .cd-close-menu::after {
   content: '';
   display: inline-block;
   position: absolute;
@@ -624,6 +611,7 @@ html {
 }
 
 #main-nav.is-visible {
+  position: relative;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
   -webkit-transform: translateY(0);
   -moz-transform: translateY(0);
@@ -646,7 +634,7 @@ html {
 }
 
 .cd-shadow-layer {
-  position: fixed;
+  position: relative;
   top: 0;
   left: 0;
   height: 100%;

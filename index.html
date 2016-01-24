@@ -18,7 +18,7 @@
     <!--    JS-->
     <script type="text/javascript" src="js/jquery2.2.0.js"></script>
     <script type="text/javascript" src="js/bootstrap/bootstrap.min.js"></script>
-    <script type="text/javascript" src="js/modernizr.js"></script>
+    <script type="text/javascript" src="js/modernizrMenu.js"></script>
     <script type="text/javascript" src="js/jquery.onepage-scroll.js"></script>
     <script type="text/javascript" src="js/owl.carousel.js"></script>
     <script>
@@ -131,18 +131,43 @@
         <!--           SERVICE-->
 
         <section id="service" class="services-section">
-            <a class="cd-menu-trigger nav-button" href="#main-nav2">menu</a>
+<!--
+<div>
+            <a class="cd-menu-trigger nav-button" href="#main-nav">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </a>
             <div class="cd-shadow-layer"></div>
             <nav id="main-nav">
-	<ul>
-		<li><a href="#0"><span>Tour</span></a></li>
-		<li><a href="#0"><span>Pricing</span></a></li>
-		<li><a href="#0"><span>Labs</span></a></li>
-		<li><a href="#0"><span>About</span></a></li>
-		<li><a href="#0"><span>Contact us</span></a></li>
-	</ul>
-	<a href="#0" class="cd-close-menu">Close<span></span></a>
-</nav>
+                <ul>
+                    <li><a href="#0"><span>Tour</span></a></li>
+                    <li><a href="#0"><span>Pricing</span></a></li>
+                    <li><a href="#0"><span>Labs</span></a></li>
+                    <li><a href="#0"><span>About</span></a></li>
+                    <li><a href="#0"><span>Contact us</span></a></li>
+                </ul>
+                <a href="#0" class="cd-close-menu">Close<span></span>
+                </a>
+            </nav>
+            </div>
+-->
+<nav class="cd-stretchy-nav">
+		<a class="cd-nav-trigger" href="#0">
+			Menu
+			<span aria-hidden="true"></span>
+		</a>
+
+		<ul>
+			<li><a href="#0" class="active"><span>Home</span></a></li>
+			<li><a href="#0"><span>Portfolio</span></a></li>
+			<li><a href="#0"><span>Services</span></a></li>
+			<li><a href="#0"><span>Store</span></a></li>
+			<li><a href="#0"><span>Contact</span></a></li>
+		</ul>
+
+		<span aria-hidden="true" class="stretchy-nav-bg"></span>
+	</nav>
             <div class="container center">
                 <div class="row">
                     <div class="col-md-6 col-sm-12 img1 hvr-underline-from-left">
