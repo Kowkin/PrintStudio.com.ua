@@ -1,14 +1,15 @@
 <!doctype html>
-<html>
+<html lang="ru" class="no-js">
 
 <head>
     <meta charset="UTF-8">
-    <!--    <meta name="viewport" content="initial-scale=1, width=device-width, maximum-scale=1, minimum-scale=1, user-scalable=no">-->
+    <meta name="viewport" content="initial-scale=1, width=device-width, maximum-scale=1, minimum-scale=1, user-scalable=no">
     <meta name="description" content="">
     <meta name="author" content="">
     <title>PRINT.Studio</title>
     <link rel="shortcut icon" href="">
     <!--    CSS-->
+    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type='text/css' href="css/reset.css">
     <link rel="stylesheet" type='text/css' href="css/style.css">
     <link rel="stylesheet" type='text/css' href="css/hover.css">
@@ -16,14 +17,14 @@
     <link rel='stylesheet' type='text/css' href='css/onepage-scroll.css'>
     <link rel="stylesheet" type="text/css" href="css/owl.carousel.css">
     <!--    JS-->
+    <script type="text/javascript" src="js/modernizrMenu.js"></script>
     <script type="text/javascript" src="js/jquery2.2.0.js"></script>
     <script type="text/javascript" src="js/bootstrap/bootstrap.min.js"></script>
-    <script type="text/javascript" src="js/modernizrMenu.js"></script>
     <script type="text/javascript" src="js/jquery.onepage-scroll.js"></script>
     <script type="text/javascript" src="js/owl.carousel.js"></script>
     <script>
         //        ONEPAGESCROLL
-        $(document).ready(function () {
+        $(document).ready(function() {
             $('.main').onepage_scroll({
                 sectionContainer: "section",
                 easing: "ease-in-out",
@@ -34,20 +35,9 @@
                 keyboard: true,
                 responsiveFallback: false
             });
-            $('#moveToMain').click(function () {
-                $(".main").moveTo(1);
-            });
-            $('#moveToServices').click(function () {
-                $(".main").moveTo(2);
-            });
-            $('#moveToProducts').click(function () {
-                $(".main").moveTo(3);
-            });
-            $('#moveToPartners').click(function () {
-                $(".main").moveTo(4);
-            });
-            $('#moveToContacts').click(function () {
-                $(".main").moveTo(5);
+            $('a.onepagescroll').click(function(e) {
+                e.preventDefault();
+                $(".main").moveTo($(this).data('targetid'));
             });
         });
         //        SLIDER 
@@ -67,13 +57,14 @@
                 }
             }
         })
+
     </script>
 </head>
 
 <body>
     <div class="main">
-        <!--           MAIN-->
 
+        <!--           MAIN-->
         <section id="main" class="main-section">
 
             <div class="bg-video hidden-sm">
@@ -105,11 +96,16 @@
                             <!-- Collect the nav links, forms, and other content for toggling -->
                             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                                 <ul class="nav navbar-nav main-nav">
-                                    <li class="page-scroll hvr-underline-from-left"><a id="moveToMain">Главная</a></li>
-                                    <li class="page-scroll hvr-underline-from-left"><a id="moveToServices">Услуги</a></li>
-                                    <li class="page-scroll hvr-underline-from-left"><a id="moveToProducts">Продукты</a></li>
-                                    <li class="page-scroll hvr-underline-from-left"><a id="moveToPartners">Партнеры</a></li>
-                                    <li class="page-scroll hvr-underline-from-left"><a id="moveToContacts">Контакты</a></li>
+                                    <li class="page-scroll hvr-underline-from-left">
+                                        <a class="onepagescroll" data-targetid="1">Главная</a></li>
+                                    <li class="page-scroll hvr-underline-from-left">
+                                        <a class="onepagescroll" data-targetid="2">Услуги</a></li>
+                                    <li class="page-scroll hvr-underline-from-left">
+                                        <a class="onepagescroll" data-targetid="3">Продукты</a></li>
+                                    <li class="page-scroll hvr-underline-from-left">
+                                        <a class="onepagescroll" data-targetid="4">Партнеры</a></li>
+                                    <li class="page-scroll hvr-underline-from-left">
+                                        <a class="onepagescroll" data-targetid="5">Контакты</a></li>
                                 </ul>
                             </div>
                             <!-- /.navbar-collapse -->
@@ -131,8 +127,8 @@
         <!--           SERVICE-->
 
         <section id="service" class="services-section">
-<!--
-<div>
+
+            <!--
             <a class="cd-menu-trigger nav-button" href="#main-nav">
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
@@ -150,24 +146,27 @@
                 <a href="#0" class="cd-close-menu">Close<span></span>
                 </a>
             </nav>
-            </div>
 -->
-<nav class="cd-stretchy-nav">
-		<a class="cd-nav-trigger" href="#0">
-			Menu
-			<span aria-hidden="true"></span>
-		</a>
 
-		<ul>
-			<li><a href="#0" class="active"><span>Home</span></a></li>
-			<li><a href="#0"><span>Portfolio</span></a></li>
-			<li><a href="#0"><span>Services</span></a></li>
-			<li><a href="#0"><span>Store</span></a></li>
-			<li><a href="#0"><span>Contact</span></a></li>
-		</ul>
+            <nav class="cd-stretchy-nav">
+                <a class="cd-nav-trigger" href="#0">
+                    <span aria-hidden="true"></span>
+                </a>
+                <ul>
+                    <li>
+                        <a class="onepagescroll" data-targetid="1">Главная</a></li>
+                    <li>
+                        <a class="onepagescroll" data-targetid="2">Услуги</a></li>
+                    <li>
+                        <a class="onepagescroll" data-targetid="3">Продукты</a></li>
+                    <li>
+                        <a class="onepagescroll" data-targetid="4">Партнеры</a></li>
+                    <li>
+                        <a class="onepagescroll" data-targetid="5">Контакты</a></li>
+                </ul>
 
-		<span aria-hidden="true" class="stretchy-nav-bg"></span>
-	</nav>
+                <span aria-hidden="true" class="stretchy-nav-bg"></span>
+            </nav>
             <div class="container center">
                 <div class="row">
                     <div class="col-md-6 col-sm-12 img1 hvr-underline-from-left">
@@ -210,7 +209,25 @@
         <!--           PRODUCTS-->
 
         <section id="products" class="products-section">
-            <button class="nav-button">menu</button>
+            <nav class="cd-stretchy-nav">
+                <a class="cd-nav-trigger" href="#0">
+                    <span aria-hidden="true"></span>
+                </a>
+                <ul>
+                    <li>
+                        <a class="onepagescroll" data-targetid="1">Главная</a></li>
+                    <li>
+                        <a class="onepagescroll" data-targetid="2">Услуги</a></li>
+                    <li>
+                        <a class="onepagescroll" data-targetid="3">Продукты</a></li>
+                    <li>
+                        <a class="onepagescroll" data-targetid="4">Партнеры</a></li>
+                    <li>
+                        <a class="onepagescroll" data-targetid="5">Контакты</a></li>
+                </ul>
+
+                <span aria-hidden="true" class="stretchy-nav-bg"></span>
+            </nav>
             <!--
 
                 <div id="header-carousel" class="carousel slide" data-ride="header-carousel-ride">
@@ -265,7 +282,25 @@
         <!--           PARTNERS-section-->
 
         <section class="partners-section" id="moveToPartners">
-            <button class="nav-button">menu</button>
+            <nav class="cd-stretchy-nav">
+                <a class="cd-nav-trigger" href="#0">
+                    <span aria-hidden="true"></span>
+                </a>
+                <ul>
+                    <li>
+                        <a class="onepagescroll" data-targetid="1">Главная</a></li>
+                    <li>
+                        <a class="onepagescroll" data-targetid="2">Услуги</a></li>
+                    <li>
+                        <a class="onepagescroll" data-targetid="3">Продукты</a></li>
+                    <li>
+                        <a class="onepagescroll" data-targetid="4">Партнеры</a></li>
+                    <li>
+                        <a class="onepagescroll" data-targetid="5">Контакты</a></li>
+                </ul>
+
+                <span aria-hidden="true" class="stretchy-nav-bg"></span>
+            </nav>
             <div class="container center">
                 <h1>НАШИ ПАРТНЕРЫ</h1>
                 <hr/>

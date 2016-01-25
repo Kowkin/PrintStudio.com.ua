@@ -46,7 +46,7 @@ jQuery(document).ready(function(){
 //	//open menu
 //	$('.cd-menu-trigger').on('click', function(event){
 //		event.preventDefault();
-//		$('#main-nav').addClass('is-visible');
+//		$('#main-nav').addClass('is-visible').data('targetid');
 //		$('.cd-shadow-layer').addClass('is-visible');
 //	});
 //	//close menu
