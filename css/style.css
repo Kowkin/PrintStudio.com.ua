@@ -134,9 +134,16 @@ body {
   background-size: cover;
 }
 
-/* Small devices (tablets, 768px and up) */
-/* Medium devices (desktops, 992px and up) */
-/* Large devices (large desktops, 1200px and up) */
+/* phone */
+@media (max-width: 767px) {
+  .main-nav li {
+    width: auto;
+  }
+}
+
+/* tablet */
+/* notebooks */
+/* desktops */
 .container .services-section {
   width: 700px !important;
 }
@@ -402,15 +409,15 @@ Stretchy Nav style
 -------------------------------- */
 .cd-stretchy-nav {
   position: relative;
-  z-index: 2;
-  top: 5%;
-  right: 10%;
+  z-index: 3;
+  top: 100px;
+  right: 0;
 }
 
 .cd-stretchy-nav .stretchy-nav-bg {
   /* this is the stretching navigation background */
   position: absolute;
-  z-index: 1;
+  z-index: 2;
   top: 0;
   right: 0;
   width: 50%;
@@ -435,7 +442,7 @@ Stretchy Nav style
 
 .cd-nav-trigger {
   position: absolute;
-  z-index: 3;
+  z-index: 4;
   top: 0;
   right: 0;
   height: 60px;
@@ -445,6 +452,16 @@ Stretchy Nav style
   overflow: hidden;
   white-space: nowrap;
   color: transparent;
+}
+
+.cd-nav-trigger span,
+.cd-nav-trigger span::after,
+.cd-nav-trigger span::before {
+  /* this is the hamburger icon */
+  position: absolute;
+  width: 42px;
+  height: 3px;
+  background-color: #29b0aa;
 }
 
 .cd-nav-trigger span {
@@ -518,7 +535,7 @@ Stretchy Nav style
 
 .cd-stretchy-nav ul {
   position: relative;
-  z-index: 2;
+  z-index: 3;
   padding: 60px 0 0;
   visibility: hidden;
   -webkit-transition: visibility 0.3s;

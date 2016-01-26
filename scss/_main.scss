@@ -17,6 +17,7 @@
     }
 }
 
+
 /* Header */
 
 .bg-video {
@@ -53,16 +54,22 @@
 
 //MEDIA
 
-/* Small devices (tablets, 768px and up) */
-
+/* phone */
+@media (max-width: 767px) {
+    .main-nav li{
+        width: auto;
+    }
+}
+/* tablet */
 @media (min-width: 768px) {
+  
 }
 
-/* Medium devices (desktops, 992px and up) */
+/* notebooks */
 
 @media (min-width: 992px) {}
 
 
-/* Large devices (large desktops, 1200px and up) */
+/* desktops */
 
 @media (min-width: 1200px) {}
