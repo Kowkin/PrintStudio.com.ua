@@ -5,7 +5,7 @@
         height: 74px;
         width: 66px;
     }
-    .col-md-2 {
+    .col-lg-2 {
         padding: 60px;
     }
     hr {
@@ -29,14 +29,17 @@
 //MEDIA
 
 /* Small devices (tablets, 768px and up) */
-
-@media (min-width: 768px) {
+@media (max-width: 767px) {
     .partners-bord-bot {
         border: none;
     }
     .partners-bord-top {
         border: none;
     }
+}
+
+@media (min-width: 768px) {
+
 }
 
 /* Medium devices (desktops, 992px and up) */

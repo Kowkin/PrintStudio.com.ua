@@ -42,6 +42,7 @@ jQuery(document).ready(function(){
 		});
 	}
 });
+
 //jQuery(document).ready(function($){
 //	//open menu
 //	$('.cd-menu-trigger').on('click', function(event){
