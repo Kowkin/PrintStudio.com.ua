@@ -294,7 +294,7 @@ body {
   width: 66px;
 }
 
-.partners-section .col-md-2 {
+.partners-section .col-lg-2 {
   padding: 60px;
 }
 
@@ -316,7 +316,7 @@ body {
 }
 
 /* Small devices (tablets, 768px and up) */
-@media (min-width: 768px) {
+@media (max-width: 767px) {
   .partners-bord-bot {
     border: none;
   }
@@ -387,7 +387,7 @@ html {
   position: absolute;
   width: 4px;
   height: 4px;
-  background: rgba(0, 0, 0, 0.85);
+  background: #29b0aa;
   border-radius: 10px;
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
@@ -397,7 +397,7 @@ html {
   width: 10px;
   height: 10px;
   background: none;
-  border: 1px solid black;
+  border: 1px solid #29b0aa;
   margin-top: -4px;
   left: 8px;
 }
