@@ -69,6 +69,10 @@ body {
   left: 30%;
 }
 
+.hide {
+  display: none;
+}
+
 .center {
   margin: 0 auto;
   width: 100%;
@@ -408,10 +412,10 @@ Stretchy Nav style
 
 -------------------------------- */
 .cd-stretchy-nav {
-  position: relative;
-  z-index: 3;
+  position: absolute;
+  z-index: 99999;
   top: 100px;
-  right: 0;
+  right: 5%;
 }
 
 .cd-stretchy-nav .stretchy-nav-bg {
