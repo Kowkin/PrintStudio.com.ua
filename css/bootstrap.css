@@ -1629,6 +1629,7 @@ mark,
 
 .text-muted {
   color: #777777;
+  padding-top: 7px;
 }
 
 .text-primary {

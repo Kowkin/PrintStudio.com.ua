@@ -1,4 +1,5 @@
 @import 'fontset';
+
 .gap-15 {
     height: 15px;
 }
@@ -40,12 +41,12 @@ body {
     -webkit-transform: translateX(-50%) translateY(-50%);
     transform: translateX(-50%) translateY(-50%);
 }
-
+@import 'onepagescroll';
+@import 'menu-animation';
 @import 'main-section';
 @import 'service-section';
 @import 'product-section';
 @import 'partners-section';
-@import 'onepagescroll';
-@import 'menu-animation';
+@import 'contact-section';
 @import 'media-queries';
 

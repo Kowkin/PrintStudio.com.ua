@@ -60,7 +60,48 @@ jQuery(document).ready(function(){
 
 
 
-// Highlight the top nav as scrolling occurs
-$('body').scrollspy({
-    target: '.scrollspy'
+
+// Floating label headings for the contact form
+$(function() {
+    $("body").on("input propertychange", ".floating-label-form-group", function(e) {
+        $(this).toggleClass("floating-label-form-group-with-value", !! $(e.target).val());
+    }).on("focus", ".floating-label-form-group", function() {
+        $(this).addClass("floating-label-form-group-with-focus");
+    }).on("blur", ".floating-label-form-group", function() {
+        $(this).removeClass("floating-label-form-group-with-focus");
+    });
+});
+
+// Closes the Responsive Menu on Menu Item Click
+$('.navbar-collapse ul li a').click(function() {
+    $('.navbar-toggle:visible').click();
+});
+
+//mail_to
+//setup email here
+$(function(){
+   $('#button-send').click(function (event) {
+        $('#button-send').html('Sending E-Mail...');
+        event.preventDefault();
+
+        $.ajax({
+            type: 'POST',
+            url: 'send_form_email.php',
+            data: $('#contact_form').serialize(),
+            success: function (html) {
+                if (html.success == '1') {
+                    $('#button-send').html('Send E-Mail');
+                    $('#success').show();
+                }
+                else {
+                    $('#button-send').html('Send E-Mail');
+                    $('#error').show();
+                }
+            },
+            error: function () {
+                $('#button-send').html('Send E-Mail');
+                $('#error').show();
+            }
+        });
+    }); 
 });

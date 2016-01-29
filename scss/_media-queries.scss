@@ -33,12 +33,9 @@
 //    }
 //}
 
-
-
-
 /* Small devices (tablets, 768px and up) */
 
-@media (max-width: 768px){
+@media (max-width: 768px) {
     .cd-stretchy-nav {
         margin-top: 5%;
         padding-left: 80%;
@@ -49,20 +46,28 @@
     .main-nav li {
         width: auto;
     }
-    
+    .partners-section .col-lg-2 {
+        padding: 40px 20px 40px 20px;
+    }
+    .partners-section .center {
+        top: 47%;
+    }
+    footer{
+        height: 100px;
+        transition: all 2s ease-in-out;
+    } 
 }
+
 
 /* Medium devices (desktops, 992px and up) */
 
-@media (min-width: 992px){
+@media (min-width: 992px) {}
 
-}
 
 /* Large devices (large desktops, 1200px and up) */
 
-@media (min-width: 1200px){
+@media (min-width: 1200px) {}
 
-}
 
 /* retina */
 
