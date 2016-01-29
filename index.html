@@ -14,10 +14,9 @@
     <link rel="stylesheet" type='text/css' href="css/style.css">
     <link rel="stylesheet" type='text/css' href="css/hover.css">
     <link rel="stylesheet" type='text/css' href="css/bootstrap.css">
-    <link rel='stylesheet' type='text/css' href='css/onepage-scroll.css'>
     <link rel="stylesheet" type="text/css" href="css/owl.carousel.css">
     <!--    JS-->
-    <script type="text/javascript" src="js/modernizrMenu.js"></script>
+    <script type="text/javascript" src="js/modernizr.js"></script>
     <script type="text/javascript" src="js/jquery2.2.0.js"></script>
     <script type="text/javascript" src="js/bootstrap/bootstrap.min.js"></script>
     <script type="text/javascript" src="js/jquery.onepage-scroll.js"></script>
@@ -34,8 +33,7 @@
                 updateURL: false,
                 loop: true,
                 keyboard: true,
-                responsiveFallback: false
-
+                responsiveFallback: false,
             });
             $('a.onepagescroll').click(function (e) {
                 e.preventDefault();
@@ -64,29 +62,30 @@
 </head>
 
 <body>
-        <nav class="cd-stretchy-nav">
-            <a class="cd-nav-trigger">
-                <span aria-hidden="true"></span>
-            </a>
-            <ul>
-                <li>
-                    <a class="onepagescroll" data-targetid="1">Главная</a></li>
-                <li>
-                    <a class="onepagescroll" data-targetid="2">Услуги</a></li>
-                <li>
-                    <a class="onepagescroll" data-targetid="3">Продукты</a></li>
-                <li>
-                    <a class="onepagescroll" data-targetid="4">Партнеры</a></li>
-                <li>
-                    <a class="onepagescroll" data-targetid="5">Контакты</a></li>
-            </ul>
-            <span aria-hidden="true" class="stretchy-nav-bg"></span>
-        </nav>
+    <nav class="cd-stretchy-nav">
+        <a class="cd-nav-trigger">
+            <span aria-hidden="true"></span>
+        </a>
+        <ul>
+            <li>
+                <a class="onepagescroll" data-targetid="1"><span>Главная</span></a></li>
+            <li>
+                <a class="onepagescroll" data-targetid="2"><span>Услуги</span></a></li>
+            <li>
+                <a class="onepagescroll" data-targetid="3"><span>Продукты</span></a></li>
+            <li>
+                <a class="onepagescroll" data-targetid="4"><span>Партнеры</span></a></li>
+            <li>
+                <a class="onepagescroll" data-targetid="5"><span>Контакты</span></a></li>
+        </ul>
+        <span aria-hidden="true" class="stretchy-nav-bg"></span>
+    </nav>
     <div class="main">
         <!--           MAIN-->
         <section id="main" class="main-section">
-
+<div class="overlay"></div>
             <div class="bg-video hidden-xs">
+               
                 <video preload="auto" autoplay="autoplay" loop="loop" poster="images/print.jpg">
                     <source src="images/print.webm" type="video/webm"></source>
                     <source src="images/print.mp4" type="video/mp4"></source>
@@ -101,7 +100,8 @@
                         <img src="images/logo.png" alt="">
                         <div class="gap-30"></div>
                     </div>
-                    <nav class="navbar scrollspy col-lg-11 col-lg-push-1">
+<!--                    navbar-->
+                    <nav class="navbar col-lg-11 col-lg-push-1">
                         <div class="container">
                             <!-- Brand and toggle get grouped for better mobile display -->
                             <div class="navbar-header">
@@ -115,15 +115,15 @@
                             <!-- Collect the nav links, forms, and other content for toggling -->
                             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                                 <ul class="nav navbar-nav main-nav text-center">
-                                    <li class="page-scroll hvr-underline-from-left">
+                                    <li class="hvr-underline-from-left">
                                         <a class="onepagescroll" data-targetid="1">Главная</a></li>
-                                    <li class="page-scroll hvr-underline-from-left">
+                                    <li class="hvr-underline-from-left">
                                         <a class="onepagescroll" data-targetid="2">Услуги</a></li>
-                                    <li class="page-scroll hvr-underline-from-left">
+                                    <li class="hvr-underline-from-left">
                                         <a class="onepagescroll" data-targetid="3">Продукты</a></li>
-                                    <li class="page-scroll hvr-underline-from-left">
+                                    <li class="hvr-underline-from-left">
                                         <a class="onepagescroll" data-targetid="4">Партнеры</a></li>
-                                    <li class="page-scroll hvr-underline-from-left">
+                                    <li class="hvr-underline-from-left">
                                         <a class="onepagescroll" data-targetid="5">Контакты</a></li>
                                 </ul>
                             </div>
@@ -133,12 +133,10 @@
                     </nav>
                     <!--                END NAV-->
                     <div class="gap-30"></div>
-                    <div class="col-lg-6 col-lg-offset-3">
                         <h1 style="color:white;"><span style="font-weight:900;">Print</span><span style="font-weight:100;">Studio</span></h1>
                         <hr>
                         <h2>СОВРЕМЕННАЯ ТИПОГРАФИЯ</h2>
                         <h3>ПОЛНЫЙ СПЕКТР ПОЛИГРАФИЧЕСКИХ УСЛУГ</h3>
-                    </div>
                 </div>
             </div>
         </section>

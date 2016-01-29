@@ -1,0 +1,23 @@
+/* Small devices (tablets, 768px and up) */
+@media (max-width: 768px) {
+  .cd-stretchy-nav {
+    margin-top: 5%;
+    padding-left: 80%;
+  }
+  .cd-stretchy-nav .stretchy-nav-bg {
+    width: 99%;
+  }
+  .main-nav li {
+    width: auto;
+  }
+}
+
+/* Medium devices (desktops, 992px and up) */
+/* Large devices (large desktops, 1200px and up) */
+/* retina */
+@media (min-width: 1921px) {
+  .cd-stretchy-nav {
+    top: 3%;
+    right: 10%;
+  }
+}

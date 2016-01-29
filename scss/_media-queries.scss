@@ -1,0 +1,74 @@
+////MEDIA
+//
+///* phone */
+//
+//@media (min-width: 768px) {
+//    .cd-stretchy-nav {
+//        margin-top: 5%;
+//        padding-left: 70%;
+//    }
+//    .cd-stretchy-nav .stretchy-nav-bg {
+//        width: 99%;
+//    }
+//}
+//
+///* notebooks */
+//
+//@media (min-width: 992px) {
+//    .cd-stretchy-nav {
+//        margin-top: 100px;
+//        padding-left: 74%;
+//    }
+//}
+//
+///* desktops */
+//
+//@media (min-width: 1600px) {
+//    .cd-stretchy-nav {
+//        margin-top: 110px;
+//        padding-left: 71%;
+//    }
+//    .cd-stretchy-nav .stretchy-nav-bg {
+//        width: 70%;
+//    }
+//}
+
+
+
+
+/* Small devices (tablets, 768px and up) */
+
+@media (max-width: 768px){
+    .cd-stretchy-nav {
+        margin-top: 5%;
+        padding-left: 80%;
+    }
+    .cd-stretchy-nav .stretchy-nav-bg {
+        width: 99%;
+    }
+    .main-nav li {
+        width: auto;
+    }
+    
+}
+
+/* Medium devices (desktops, 992px and up) */
+
+@media (min-width: 992px){
+
+}
+
+/* Large devices (large desktops, 1200px and up) */
+
+@media (min-width: 1200px){
+
+}
+
+/* retina */
+
+@media (min-width: 1921px) {
+    .cd-stretchy-nav {
+        top: 3%;
+        right: 10%;
+    }
+}

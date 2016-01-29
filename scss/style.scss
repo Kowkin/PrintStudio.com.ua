@@ -19,6 +19,7 @@ body {
     overflow-x: hidden;
 }
 
+
 //NAV-BUTTOn
 .nav-button {
     z-index: 2;
@@ -40,29 +41,11 @@ body {
     transform: translateX(-50%) translateY(-50%);
 }
 
-@import 'main';
+@import 'main-section';
 @import 'service-section';
 @import 'product-section';
 @import 'partners-section';
 @import 'onepagescroll';
 @import 'menu-animation';
+@import 'media-queries';
 
-//MEDIA
-
-/* Small devices (tablets, 768px and up) */
-
-@media (min-width: 768px) and (max-width:991px) {
-    .center {
-        top: 30%;
-    }
-}
-
-
-/* Medium devices (desktops, 992px and up) */
-
-@media (min-width: 992px) and (max-width: 1199px) {}
-
-
-/* Large devices (large desktops, 1200px and up) */
-
-@media (min-width: 1200px) {}
