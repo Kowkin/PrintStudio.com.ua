@@ -69,10 +69,6 @@ body {
   left: 30%;
 }
 
-.hide {
-  display: none;
-}
-
 .center {
   margin: 0 auto;
   width: 100%;
@@ -102,6 +98,20 @@ body {
 
 .main-nav li {
   width: 179px;
+}
+
+.viewing-page-1 .cd-stretchy-nav {
+  opacity: 0;
+  transition-delay: 5s;
+  transition: opacity 0.6s ease-out;
+}
+
+.viewing-page-2 .cd-stretchy-nav,
+.viewing-page-3 .cd-stretchy-nav,
+.viewing-page-4 .cd-stretchy-nav,
+.viewing-page-5 .cd-stretchy-nav {
+  opacity: 1;
+  transition: opacity 1s ease;
 }
 
 /* Header */
@@ -203,6 +213,13 @@ body {
 /* Small devices (tablets, 768px and up) */
 /* Medium devices (desktops, 992px and up) */
 /* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  .services .col-lg-6 {
+    width: 200px !important;
+    height: 200px !important;
+  }
+}
+
 .products-section .col-md-3 {
   padding: 0 !important;
 }
@@ -414,8 +431,6 @@ Stretchy Nav style
 .cd-stretchy-nav {
   position: absolute;
   z-index: 99999;
-  top: 100px;
-  right: 5%;
 }
 
 .cd-stretchy-nav .stretchy-nav-bg {
@@ -808,6 +823,25 @@ keyframes
     -ms-transform: translateX(0);
     -o-transform: translateX(0);
     transform: translateX(0);
+  }
+}
+
+/* phone */
+/* tablet */
+/* notebooks */
+/* desktops */
+@media (min-width: 1200px) {
+  .cd-stretchy-nav {
+    top: 0;
+    right: 8%;
+  }
+}
+
+/* retina */
+@media (min-width: 1921px) {
+  .cd-stretchy-nav {
+    top: 3%;
+    right: 10%;
   }
 }
 

@@ -17,6 +17,22 @@
     }
 }
 
+.viewing-page-1 .cd-stretchy-nav
+{
+    opacity: 0;
+    transition-delay: 5s;
+    transition: opacity 0.6s ease-out;
+}
+
+.viewing-page-2 .cd-stretchy-nav,
+.viewing-page-3 .cd-stretchy-nav,
+.viewing-page-4 .cd-stretchy-nav,
+.viewing-page-5 .cd-stretchy-nav,
+{
+    opacity: 1;
+    transition: opacity 1s ease;
+}
+
 
 /* Header */
 
@@ -55,15 +71,17 @@
 //MEDIA
 
 /* phone */
+
 @media (max-width: 767px) {
-    .main-nav li{
+    .main-nav li {
         width: auto;
     }
 }
+
 /* tablet */
-@media (min-width: 768px) {
-  
-}
+
+@media (min-width: 768px) {}
+
 
 /* notebooks */
 
@@ -73,3 +91,4 @@
 /* desktops */
 
 @media (min-width: 1200px) {}
+

@@ -24,18 +24,9 @@
     <script type="text/javascript" src="js/owl.carousel.js"></script>
     <script>
         //        ONEPAGESCROLL
-        
+
         $(document).ready(function () {
             $('.main').onepage_scroll({
-                beforeMove: function (index) {
-                    $(document).ready(function () {
-                        if ($('body').hasClass("viewing-page-1")) {
-                            $(".cd-stretchy-nav").hide();
-                        } else {
-                            $(".cd-stretchy-nav").show();
-                        };
-                    });
-                },
                 sectionContainer: "section",
                 easing: "ease-in-out",
                 animationTime: 1000,
@@ -51,6 +42,7 @@
                 $(".main").moveTo($(this).data('targetid'));
             });
         });
+
         //        SLIDER 
         $('.owl-carousel').owlCarousel({
             loop: true,
@@ -72,7 +64,6 @@
 </head>
 
 <body>
-    <div class="container">
         <nav class="cd-stretchy-nav">
             <a class="cd-nav-trigger">
                 <span aria-hidden="true"></span>
@@ -91,19 +82,17 @@
             </ul>
             <span aria-hidden="true" class="stretchy-nav-bg"></span>
         </nav>
-    </div>
     <div class="main">
-
         <!--           MAIN-->
         <section id="main" class="main-section">
 
-            <div class="bg-video hidden-sm">
+            <div class="bg-video hidden-xs">
                 <video preload="auto" autoplay="autoplay" loop="loop" poster="images/print.jpg">
                     <source src="images/print.webm" type="video/webm"></source>
                     <source src="images/print.mp4" type="video/mp4"></source>
                 </video>
             </div>
-            <div class="hidden-lg hidden-lg bg-header">
+            <div class="hidden-lg hidden-md bg-header">
             </div>
 
             <div class="container center header">
@@ -157,28 +146,6 @@
         <!--           SERVICE-->
 
         <section id="service" class="services-section">
-            <!--
-            <div class="container">
-                <nav class="cd-stretchy-nav">
-                    <a class="cd-nav-trigger">
-                        <span aria-hidden="true"></span>
-                    </a>
-                    <ul>
-                        <li>
-                            <a class="onepagescroll" data-targetid="1">Главная</a></li>
-                        <li>
-                            <a class="onepagescroll" data-targetid="2">Услуги</a></li>
-                        <li>
-                            <a class="onepagescroll" data-targetid="3">Продукты</a></li>
-                        <li>
-                            <a class="onepagescroll" data-targetid="4">Партнеры</a></li>
-                        <li>
-                            <a class="onepagescroll" data-targetid="5">Контакты</a></li>
-                    </ul>
-                    <span aria-hidden="true" class="stretchy-nav-bg"></span>
-                </nav>
-            </div>
--->
 
             <div class="container center">
 
