@@ -24,8 +24,18 @@
     <script type="text/javascript" src="js/owl.carousel.js"></script>
     <script>
         //        ONEPAGESCROLL
+        
         $(document).ready(function () {
             $('.main').onepage_scroll({
+                beforeMove: function (index) {
+                    $(document).ready(function () {
+                        if ($('body').hasClass("viewing-page-1")) {
+                            $(".cd-stretchy-nav").hide();
+                        } else {
+                            $(".cd-stretchy-nav").show();
+                        };
+                    });
+                },
                 sectionContainer: "section",
                 easing: "ease-in-out",
                 animationTime: 1000,
@@ -34,14 +44,8 @@
                 loop: true,
                 keyboard: true,
                 responsiveFallback: false
-            });
-            $('.main').on('change', function () {
-                $('.cd-stretchy-nav').hide()
-                val = $(this).hide();
-                $('.cd-stretchy-nav').show()
-            });
-            //            if ($('.main-section').hasClass('active')) { $('.cd-stretchy-nav').hide() }
 
+            });
             $('a.onepagescroll').click(function (e) {
                 e.preventDefault();
                 $(".main").moveTo($(this).data('targetid'));
