@@ -61,19 +61,32 @@
 
 /* Medium devices (desktops, 992px and up) */
 
-@media (min-width: 992px) {}
+@media (min-width: 992px) {
+    
+}
 
 
 /* Large devices (large desktops, 1200px and up) */
 
-@media (min-width: 1200px) {}
+@media (min-width: 1200px) {
+}
 
 
 /* retina */
 
-@media (min-width: 1921px) {
+@media (max-width: 2881px) {
     .cd-stretchy-nav {
         top: 3%;
         right: 10%;
     }
+     .cd-stretchy-nav .stretchy-nav-bg {
+        width: 1000px;
+    }
+    .contact-section .text-center{
+        margin-top: 50px;
+    }
+    footer{
+        height: 140px;
+        transition: all 2s ease-in-out;
+    } 
 }
