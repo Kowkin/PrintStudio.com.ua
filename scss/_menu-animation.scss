@@ -17,6 +17,7 @@ body.overflow-hidden {
     overflow: hidden;
 }
 
+
 /* -------------------------------- 
 
 Main components 
@@ -83,7 +84,7 @@ body {
     transform: translateX(-50%) translateY(-50%);
     width: 35px;
     height: 4px;
-    background-color: #29b0aa ;
+    background-color: #29b0aa;
     -webkit-transition: background-color 0.3s;
     -moz-transition: background-color 0.3s;
     transition: background-color 0.3s;
@@ -96,7 +97,7 @@ body {
     width: 100%;
     height: 100%;
     position: absolute;
-    background-color: #29b0aa ;
+    background-color: #29b0aa;
     right: 0;
     -webkit-transition: -webkit-transform .3s, top .3s, background-color 0s;
     -moz-transition: -moz-transform .3s, top .3s, background-color 0s;
@@ -117,7 +118,7 @@ body {
 
 .cd-primary-nav-trigger .cd-menu-icon.is-clicked::before,
 .cd-primary-nav-trigger .cd-menu-icon.is-clicked::after {
-    background-color: #29b0aa ;
+    background-color: #29b0aa;
 }
 
 .cd-primary-nav-trigger .cd-menu-icon.is-clicked::before {
@@ -139,7 +140,7 @@ body {
 }
 
 @media only screen and (min-width: 768px) {
-//    TRIGER BUTTON POSITION
+    //    TRIGER BUTTON POSITION
     .cd-primary-nav-trigger {
         width: 30px;
         background-color: transparent;
@@ -175,7 +176,7 @@ body {
     background: rgba(2, 23, 37, 0.96);
     z-index: 2;
     text-align: center;
-    padding: 50px 0;
+    padding: 15% 0!important;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
     overflow: auto;
@@ -195,13 +196,13 @@ body {
 }
 
 .cd-primary-nav li {
-    font-size: 22px;
+    font-size: 32px!important;
     font-size: 1.375rem;
     font-weight: 300;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     margin: .2em 0;
-    text-transform: capitalize;
+    text-transform: uppercase;
 }
 
 .cd-primary-nav a {
@@ -211,20 +212,10 @@ body {
     -webkit-transition: background 0.2s;
     -moz-transition: background 0.2s;
     transition: background 0.2s;
+    color: white;
+    font-weight: 500;
 }
 
-.no-touch .cd-primary-nav a:hover {
-    background-color: #e36767;
-}
-
-.cd-primary-nav .cd-label {
-    color: #06446e;
-    text-transform: uppercase;
-    font-weight: 700;
-    font-size: 14px;
-    font-size: 0.875rem;
-    margin: 2.4em 0 .8em;
-}
 
 .cd-primary-nav.is-visible {
     -webkit-transform: translateY(0);
