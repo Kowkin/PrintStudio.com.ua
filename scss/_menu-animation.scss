@@ -32,7 +32,6 @@ body {
 .cd-header {
     position: absolute;
     background: transparent!important;
-    background: rgba(2, 23, 37, 0.95);
     z-index: 3;
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
     -webkit-font-smoothing: antialiased;
@@ -65,8 +64,9 @@ body {
 
 .cd-primary-nav-trigger {
     position: absolute;
-    width: 50px;
+    width: 60px!important;
     background-color: #03263d;
+    height: 40px!important;
 }
 
 .cd-primary-nav-trigger .cd-menu-icon {
@@ -214,6 +214,13 @@ body {
     transition: background 0.2s;
     color: white;
     font-weight: 500;
+}
+.cd-primary-nav a:hover{
+    text-decoration: none;
+    color:#29b0aa;
+}
+.cd-primary-nav a:active{
+    color: #1a6f6b;
 }
 
 

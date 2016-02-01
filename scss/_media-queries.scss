@@ -1,22 +1,27 @@
 /* Small devices */
 
 @media (max-width: 768px) {
-    .cd-primary-nav{
+    .cd-primary-nav {
         padding: 30% 0!important;
     }
-    .main-section{
-        h1{
+    .main-section {
+        h1 {
             font-size: 15vw;
         }
-        h2{
+        h2 {
             font-size: 5.3vw;
         }
-        h3{
+        h3 {
             font-size: 3vw;
         }
     }
+    .cd-primary-nav-trigger {
+        width: 42px!important;
+        height: 35px!important;
+        box-shadow: none;
+    }
     .services-section {
-        hr{
+        hr {
             width: 25vw;
             border: 1.5px solid;
         }
@@ -24,7 +29,7 @@
             font-size: 7vw;
             text-transform: uppercase;
         }
-        h4{
+        h4 {
             font-size: 2vh;
             text-transform: uppercase;
         }
@@ -34,30 +39,56 @@
         .img4 {
             max-width: 100%;
             height: 25vh;
-            margin:auto!important;
+            margin: auto!important;
         }
-        .img1,.img2,.img3,{
+        .img1,
+        .img2,
+        .img3,
+        {
             border-bottom: 4px solid;
         }
-    }
-    .partners-section{
-        h1{
-           font-size: 4em;
-            text-transform: uppercase; 
+        .service-inside-center {
+            top: 14%;
         }
-        hr{
+    }
+    .partners-section {
+        height: 100vh;
+        h1 {
+            font-size: 12vw;
+            text-transform: uppercase;
+        }
+        hr {
             margin: 20px auto!important;
+        }
+        img {
+            width: 12vh;
+            height: 12vh;
         }
     }
     .partners-section .col-lg-2 {
-        padding: 30px 20px 40px 20px;
+        padding: 2vh 1vw 3vh 1vw;
     }
     .partners-section .center {
         top: 47%;
     }
-    .contact-section{
-        h1{
-           font-size: 4em; 
+    .contact-section {
+        height: 100vh;
+        h1 {
+            font-size: 12vw;
+            padding-bottom: 0;
+            padding-top: 3vh;
+        }
+        p{
+            font-size: 2vh;
+        }
+        .social-icons {
+            padding-top: 2vh!important;
+            padding: 0;
+            img{
+                padding-left: 1vw; 
+                height: 19vw;
+                width: 20vw;
+            }
         }
     }
     footer {
@@ -69,10 +100,6 @@
     .cd-primary-nav-trigger {
         right: 3%;
         top: 5%;
-    }
-    .social-icons {
-        margin-top: 40px;
-        padding: 0;
     }
 }
 
@@ -98,7 +125,6 @@
         opacity: 1;
         transition: opacity 1s ease;
     }
-    
 }
 
 

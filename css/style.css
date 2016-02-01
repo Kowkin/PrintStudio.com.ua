@@ -193,7 +193,6 @@ body {
 .cd-header {
   position: absolute;
   background: transparent !important;
-  background: rgba(2, 23, 37, 0.95);
   z-index: 3;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
   -webkit-font-smoothing: antialiased;
@@ -226,8 +225,9 @@ body {
 
 .cd-primary-nav-trigger {
   position: absolute;
-  width: 50px;
+  width: 60px !important;
   background-color: #03263d;
+  height: 40px !important;
 }
 
 .cd-primary-nav-trigger .cd-menu-icon {
@@ -374,6 +374,15 @@ body {
   transition: background 0.2s;
   color: white;
   font-weight: 500;
+}
+
+.cd-primary-nav a:hover {
+  text-decoration: none;
+  color: #29b0aa;
+}
+
+.cd-primary-nav a:active {
+  color: #1a6f6b;
 }
 
 .cd-primary-nav.is-visible {
@@ -743,6 +752,11 @@ footer {
   .main-section h3 {
     font-size: 3vw;
   }
+  .cd-primary-nav-trigger {
+    width: 42px !important;
+    height: 35px !important;
+    box-shadow: none;
+  }
   .services-section hr {
     width: 25vw;
     border: 1.5px solid;
@@ -763,24 +777,53 @@ footer {
     height: 25vh;
     margin: auto !important;
   }
-  .services-section .img1, .services-section .img2, .services-section .img3 {
+  .services-section .img1,
+  .services-section .img2,
+  .services-section .img3 {
     border-bottom: 4px solid;
   }
+  .services-section .service-inside-center {
+    top: 14%;
+  }
+  .partners-section {
+    height: 100vh;
+  }
   .partners-section h1 {
-    font-size: 4em;
+    font-size: 12vw;
     text-transform: uppercase;
   }
   .partners-section hr {
     margin: 20px auto !important;
   }
+  .partners-section img {
+    width: 12vh;
+    height: 12vh;
+  }
   .partners-section .col-lg-2 {
-    padding: 30px 20px 40px 20px;
+    padding: 2vh 1vw 3vh 1vw;
   }
   .partners-section .center {
     top: 47%;
   }
+  .contact-section {
+    height: 100vh;
+  }
   .contact-section h1 {
-    font-size: 4em;
+    font-size: 12vw;
+    padding-bottom: 0;
+    padding-top: 3vh;
+  }
+  .contact-section p {
+    font-size: 2vh;
+  }
+  .contact-section .social-icons {
+    padding-top: 2vh !important;
+    padding: 0;
+  }
+  .contact-section .social-icons img {
+    padding-left: 1vw;
+    height: 19vw;
+    width: 20vw;
   }
   footer {
     display: none !important;
@@ -791,10 +834,6 @@ footer {
   .cd-primary-nav-trigger {
     right: 3%;
     top: 5%;
-  }
-  .social-icons {
-    margin-top: 40px;
-    padding: 0;
   }
 }
 
@@ -823,5 +862,105 @@ footer {
   footer {
     height: 140px;
     transition: all 2s ease-in-out;
+  }
+}
+
+/* Global */
+h2 {
+  margin: 0;
+  padding: 0;
+  font-weight: 300;
+}
+
+/* Carousel */
+#carousel {
+  font-family: 'Lato', sans-serif;
+}
+
+#carousel .carousel-wrapper {
+  background: #111;
+  color: white;
+  font-weight: 300;
+  padding: 40px 0;
+  text-transform: uppercase;
+}
+
+#carousel .carousel-wrapper h2 {
+  padding: 0 0 35px;
+  text-align: center;
+}
+
+#carousel .carousel-wrapper ol {
+  margin: 0 auto;
+  position: static;
+  width: 100%;
+}
+
+#carousel .carousel-wrapper ol span {
+  border: 1px solid transparent;
+  cursor: pointer;
+  height: auto;
+  padding: 10px 15px;
+  text-align: center;
+  transition: border 0.3s, color 0.3s;
+  width: auto;
+}
+
+#carousel .carousel-wrapper ol .active {
+  background: none;
+  border: 1px solid orange;
+  color: orange;
+  height: auto;
+  padding: 10px 15px;
+  width: auto;
+}
+
+#carousel .carousel-inner .item {
+  transition: opacity 1s;
+}
+
+#carousel .carousel-inner .item .img-wrapper {
+  height: 400px;
+  margin: 0 -15px 0 0;
+  overflow: hidden;
+  position: relative;
+}
+
+#carousel .carousel-inner .item .img-wrapper img {
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 1000px;
+}
+
+#carousel .carousel-inner .item .carousel-caption {
+  background: orange;
+  color: #111;
+  font-size: 1.1em;
+  height: 400px;
+  margin: 0 0 0 -15px;
+  padding: 30px;
+  position: static;
+  text-align: left;
+  text-shadow: none;
+}
+
+#carousel .carousel-inner .item .carousel-caption h2 {
+  padding: 0 0 20px;
+  text-transform: uppercase;
+}
+
+@media (max-width: 767px) {
+  #carousel .carousel-inner .item .img-wrapper {
+    height: auto;
+  }
+  #carousel .carousel-inner .item .img-wrapper img {
+    transform: none;
+    position: static;
+    width: 100%;
+  }
+  #carousel .carousel-inner .item .carousel-caption {
+    height: auto;
   }
 }
