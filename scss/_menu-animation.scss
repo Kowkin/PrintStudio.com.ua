@@ -1,66 +1,77 @@
 /* -------------------------------- 
 
-Stretchy Nav style
+Primary style
 
 -------------------------------- */
 
-.cd-stretchy-nav {
-    position: absolute;
-    z-index: 99999;
+*,
+*:after,
+*:before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
 }
 
-.cd-stretchy-nav .stretchy-nav-bg {
-    /* this is the stretching navigation background */
-    position: absolute;
-    z-index: 2;
-    top: 0;
-    right: 0;
-    width: 80%;
-    height: 60px;
-    border-radius: 30px;
-    background: rgba(0, 0, 0, 0.9);
-    opacity: 0;
-    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
-    -webkit-transition: height 0.2s, box-shadow 0.2s;
-    -moz-transition: height 0.2s, box-shadow 0.2s;
-    transition: height 0.2s, box-shadow 0.2s;
-}
-
-.cd-stretchy-nav.nav-is-visible .stretchy-nav-bg {
-    height: 100%;
-    box-shadow: 0 6px 30px rgba(0, 0, 0, 0.2);
-    opacity: 1;
-    -moz-transition: all 1s ease;
-    -o-transition: all 1s ease;
-    -webkit-transition: all 1s ease;
-}
-
-.cd-nav-trigger {
-    position: absolute;
-    z-index: 4;
-    top: 0;
-    right: 0;
-    height: 60px;
-    width: 60px;
-    border-radius: 50%;
-    /* replace text with image */
+body.overflow-hidden {
+    /* when primary navigation is visible, the content in the background won't scroll */
     overflow: hidden;
-    white-space: nowrap;
-    color: transparent;
 }
 
-.cd-nav-trigger span,
-.cd-nav-trigger span::after,
-.cd-nav-trigger span::before {
-    /* this is the hamburger icon */
+/* -------------------------------- 
+
+Main components 
+
+-------------------------------- */
+
+html,
+body {
+    height: 100%;
+}
+
+.cd-header {
     position: absolute;
-    width: 42px;
-    height: 3px;
-    background-color: #29b0aa;
+    background: transparent!important;
+    background: rgba(2, 23, 37, 0.95);
+    z-index: 3;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
-.cd-nav-trigger span {
-    /* middle line of the hamburger icon */
+@media only screen and (min-width: 768px) {
+    .cd-header {
+        height: 80px;
+        background: transparent;
+        box-shadow: none;
+    }
+}
+
+@media only screen and (min-width: 1170px) {
+    .cd-header {
+        -webkit-transition: background-color 0.3s;
+        -moz-transition: background-color 0.3s;
+        transition: background-color 0.3s;
+        /* Force Hardware Acceleration in WebKit */
+        -webkit-transform: translate3d(0, 0, 0);
+        -moz-transform: translate3d(0, 0, 0);
+        -ms-transform: translate3d(0, 0, 0);
+        -o-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+    }
+}
+
+.cd-primary-nav-trigger {
+    position: absolute;
+    width: 50px;
+    background-color: #03263d;
+}
+
+.cd-primary-nav-trigger .cd-menu-icon {
+    /* this span is the central line of the menu icon */
+    display: inline-block;
+    position: absolute;
     left: 50%;
     top: 50%;
     bottom: auto;
@@ -70,239 +81,173 @@ Stretchy Nav style
     -ms-transform: translateX(-50%) translateY(-50%);
     -o-transform: translateX(-50%) translateY(-50%);
     transform: translateX(-50%) translateY(-50%);
-    -webkit-transition: background-color 0.2s;
-    -moz-transition: background-color 0.2s;
-    transition: background-color 0.2s;
+    width: 35px;
+    height: 4px;
+    background-color: #29b0aa ;
+    -webkit-transition: background-color 0.3s;
+    -moz-transition: background-color 0.3s;
+    transition: background-color 0.3s;
+    /* these are the upper and lower lines in the menu icon */
 }
 
-.cd-nav-trigger span::after,
-.cd-nav-trigger span::before {
-    /* top and bottom lines of the hamburger icon */
+.cd-primary-nav-trigger .cd-menu-icon::before,
+.cd-primary-nav-trigger .cd-menu-icon:after {
     content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: #29b0aa ;
+    right: 0;
+    -webkit-transition: -webkit-transform .3s, top .3s, background-color 0s;
+    -moz-transition: -moz-transform .3s, top .3s, background-color 0s;
+    transition: transform .3s, top .3s, background-color 0s;
+}
+
+.cd-primary-nav-trigger .cd-menu-icon::before {
+    top: -10px;
+}
+
+.cd-primary-nav-trigger .cd-menu-icon::after {
+    top: 10px;
+}
+
+.cd-primary-nav-trigger .cd-menu-icon.is-clicked {
+    background-color: rgba(255, 255, 255, 0);
+}
+
+.cd-primary-nav-trigger .cd-menu-icon.is-clicked::before,
+.cd-primary-nav-trigger .cd-menu-icon.is-clicked::after {
+    background-color: #29b0aa ;
+}
+
+.cd-primary-nav-trigger .cd-menu-icon.is-clicked::before {
     top: 0;
+    -webkit-transform: rotate(135deg);
+    -moz-transform: rotate(135deg);
+    -ms-transform: rotate(135deg);
+    -o-transform: rotate(135deg);
+    transform: rotate(135deg);
+}
+
+.cd-primary-nav-trigger .cd-menu-icon.is-clicked::after {
+    top: 0;
+    -webkit-transform: rotate(225deg);
+    -moz-transform: rotate(225deg);
+    -ms-transform: rotate(225deg);
+    -o-transform: rotate(225deg);
+    transform: rotate(225deg);
+}
+
+@media only screen and (min-width: 768px) {
+//    TRIGER BUTTON POSITION
+    .cd-primary-nav-trigger {
+        width: 30px;
+        background-color: transparent;
+        height: 30px;
+        line-height: 30px;
+        left: 90%!important;
+        top: 10%;
+        bottom: auto;
+        -webkit-transform: translateY(-50%);
+        -moz-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        -o-transform: translateY(-50%);
+        transform: translateY(-50%);
+    }
+    .cd-primary-nav-trigger .cd-menu-icon {
+        left: auto;
+        right: 1em;
+        -webkit-transform: translateX(0) translateY(-50%);
+        -moz-transform: translateX(0) translateY(-50%);
+        -ms-transform: translateX(0) translateY(-50%);
+        -o-transform: translateX(0) translateY(-50%);
+        transform: translateX(0) translateY(-50%);
+    }
+}
+
+.cd-primary-nav {
+    /* by default it's hidden - on top of the viewport */
+    position: fixed;
     left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(2, 23, 37, 0.96);
+    z-index: 2;
+    text-align: center;
+    padding: 50px 0;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
-    -webkit-transition: -webkit-transform 0.2s;
-    -moz-transition: -moz-transform 0.2s;
-    transition: transform 0.2s;
+    overflow: auto;
+    /* this fixes the buggy scrolling on webkit browsers - mobile devices only - when overflow property is applied */
+    -webkit-overflow-scrolling: touch;
+    -webkit-transform: translateY(-100%);
+    -moz-transform: translateY(-100%);
+    -ms-transform: translateY(-100%);
+    -o-transform: translateY(-100%);
+    transform: translateY(-100%);
+    -webkit-transition-property: -webkit-transform;
+    -moz-transition-property: -moz-transform;
+    transition-property: transform;
+    -webkit-transition-duration: 0.4s;
+    -moz-transition-duration: 0.4s;
+    transition-duration: 0.4s;
 }
 
-.cd-nav-trigger span::before {
-    -webkit-transform: translateY(-6px);
-    -moz-transform: translateY(-6px);
-    -ms-transform: translateY(-6px);
-    -o-transform: translateY(-6px);
-    transform: translateY(-6px);
+.cd-primary-nav li {
+    font-size: 22px;
+    font-size: 1.375rem;
+    font-weight: 300;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    margin: .2em 0;
+    text-transform: capitalize;
 }
 
-.cd-nav-trigger span::after {
-    -webkit-transform: translateY(6px);
-    -moz-transform: translateY(6px);
-    -ms-transform: translateY(6px);
-    -o-transform: translateY(6px);
-    transform: translateY(6px);
+.cd-primary-nav a {
+    display: inline-block;
+    padding: .4em 1em;
+    border-radius: 0.25em;
+    -webkit-transition: background 0.2s;
+    -moz-transition: background 0.2s;
+    transition: background 0.2s;
 }
 
-.no-touch .cd-nav-trigger:hover ~ .stretchy-nav-bg {
-    box-shadow: 0 6px 30px rgba(0, 0, 0, 0.2);
+.no-touch .cd-primary-nav a:hover {
+    background-color: #e36767;
 }
 
-.nav-is-visible .cd-nav-trigger span {
-    background-color: transparent;
+.cd-primary-nav .cd-label {
+    color: #06446e;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 14px;
+    font-size: 0.875rem;
+    margin: 2.4em 0 .8em;
 }
 
-.nav-is-visible .cd-nav-trigger span::before {
-    -webkit-transform: rotate(-45deg);
-    -moz-transform: rotate(-45deg);
-    -ms-transform: rotate(-45deg);
-    -o-transform: rotate(-45deg);
-    transform: rotate(-45deg);
+.cd-primary-nav.is-visible {
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
+    transform: translateY(0);
 }
 
-.nav-is-visible .cd-nav-trigger span::after {
-    -webkit-transform: rotate(45deg);
-    -moz-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
-    -o-transform: rotate(45deg);
-    transform: rotate(45deg);
+@media only screen and (min-width: 768px) {
+    .cd-primary-nav {
+        padding: 80px 0;
+    }
 }
 
-.cd-stretchy-nav ul {
+@media only screen and (min-width: 1170px) {
+    .cd-primary-nav li {
+        font-size: 30px;
+        font-size: 1.875rem;
+    }
+}
+
+.cd-main-content {
     position: relative;
-    z-index: 3;
-    padding: 60px 0 0;
-    visibility: hidden;
-    -webkit-transition: visibility 0.3s;
-    -moz-transition: visibility 0.3s;
-    transition: visibility 0.3s;
-    text-align: right;
+    z-index: 1;
 }
-
-.cd-stretchy-nav ul a {
-    position: relative;
-    display: block;
-    height: 50px;
-    line-height: 50px;
-    padding: 0 calc(1em + 60px) 0 1em;
-    color: rgba(255, 255, 255, 0.7);
-    font-size: 1.4rem;
-    -webkit-transition: color 0.2s;
-    -moz-transition: color 0.2s;
-    transition: color 0.2s;
-    text-align: center;
-}
-
-.cd-stretchy-nav.nav-is-visible ul {
-    visibility: visible;
-}
-
-.cd-stretchy-nav.nav-is-visible ul span {
-    opacity: 1;
-    -webkit-transform: translateX(0);
-    -moz-transform: translateX(0);
-    -ms-transform: translateX(0);
-    -o-transform: translateX(0);
-    transform: translateX(0);
-    -webkit-animation: slideIn 0.15s backwards;
-    -moz-animation: slideIn 0.15s backwards;
-    animation: slideIn 0.15s backwards;
-    -webkit-transition: -webkit-transform 0.2s;
-    -moz-transition: -moz-transform 0.2s;
-    transition: transform 0.2s;
-}
-
-.no-touch .cd-stretchy-nav.nav-is-visible ul a:hover {
-    color: #ffffff;
-}
-
-.no-touch .cd-stretchy-nav.nav-is-visible ul a:hover::after {
-    opacity: 1;
-}
-
-.no-touch .cd-stretchy-nav.nav-is-visible ul a:hover span {
-    -webkit-transform: translateX(-5px);
-    -moz-transform: translateX(-5px);
-    -ms-transform: translateX(-5px);
-    -o-transform: translateX(-5px);
-    transform: translateX(-5px);
-}
-
-.cd-stretchy-nav.nav-is-visible ul li:first-of-type a::after,
-.cd-stretchy-nav.nav-is-visible ul li:first-of-type span {
-    -webkit-animation-delay: 0.05s;
-    -moz-animation-delay: 0.05s;
-    animation-delay: 0.05s;
-}
-
-.cd-stretchy-nav.nav-is-visible ul li:nth-of-type(2) a::after,
-.cd-stretchy-nav.nav-is-visible ul li:nth-of-type(2) span {
-    -webkit-animation-delay: 0.1s;
-    -moz-animation-delay: 0.1s;
-    animation-delay: 0.1s;
-}
-
-.cd-stretchy-nav.nav-is-visible ul li:nth-of-type(3) a::after,
-.cd-stretchy-nav.nav-is-visible ul li:nth-of-type(3) span {
-    -webkit-animation-delay: 0.15s;
-    -moz-animation-delay: 0.15s;
-    animation-delay: 0.15s;
-}
-
-.cd-stretchy-nav.nav-is-visible ul li:nth-of-type(4) a::after,
-.cd-stretchy-nav.nav-is-visible ul li:nth-of-type(4) span {
-    -webkit-animation-delay: 0.2s;
-    -moz-animation-delay: 0.2s;
-    animation-delay: 0.2s;
-}
-
-.cd-stretchy-nav.nav-is-visible ul li:nth-of-type(5) a::after,
-.cd-stretchy-nav.nav-is-visible ul li:nth-of-type(5) span {
-    -webkit-animation-delay: 0.25s;
-    -moz-animation-delay: 0.25s;
-    animation-delay: 0.25s;
-}
-
-
-/* -------------------------------- 
-
-keyframes
-
--------------------------------- */
-
-@-webkit-keyframes scaleIn {
-    from {
-        -webkit-transform: translateY(-50%) scale(0);
-    }
-    to {
-        -webkit-transform: translateY(-50%) scale(1);
-    }
-}
-
-@-moz-keyframes scaleIn {
-    from {
-        -moz-transform: translateY(-50%) scale(0);
-    }
-    to {
-        -moz-transform: translateY(-50%) scale(1);
-    }
-}
-
-@keyframes scaleIn {
-    from {
-        -webkit-transform: translateY(-50%) scale(0);
-        -moz-transform: translateY(-50%) scale(0);
-        -ms-transform: translateY(-50%) scale(0);
-        -o-transform: translateY(-50%) scale(0);
-        transform: translateY(-50%) scale(0);
-    }
-    to {
-        -webkit-transform: translateY(-50%) scale(1);
-        -moz-transform: translateY(-50%) scale(1);
-        -ms-transform: translateY(-50%) scale(1);
-        -o-transform: translateY(-50%) scale(1);
-        transform: translateY(-50%) scale(1);
-    }
-}
-
-@-webkit-keyframes slideIn {
-    from {
-        opacity: 0;
-        -webkit-transform: translateX(-25px);
-    }
-    to {
-        opacity: 1;
-        -webkit-transform: translateX(0);
-    }
-}
-
-@-moz-keyframes slideIn {
-    from {
-        opacity: 0;
-        -moz-transform: translateX(-25px);
-    }
-    to {
-        opacity: 1;
-        -moz-transform: translateX(0);
-    }
-}
-
-@keyframes slideIn {
-    from {
-        opacity: 0;
-        -webkit-transform: translateX(-25px);
-        -moz-transform: translateX(-25px);
-        -ms-transform: translateX(-25px);
-        -o-transform: translateX(-25px);
-        transform: translateX(-25px);
-    }
-    to {
-        opacity: 1;
-        -webkit-transform: translateX(0);
-        -moz-transform: translateX(0);
-        -ms-transform: translateX(0);
-        -o-transform: translateX(0);
-        transform: translateX(0);
-    }
-}
-

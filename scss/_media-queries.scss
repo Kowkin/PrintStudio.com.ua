@@ -1,48 +1,7 @@
-////MEDIA
-//
-///* phone */
-//
-//@media (min-width: 768px) {
-//    .cd-stretchy-nav {
-//        margin-top: 5%;
-//        padding-left: 70%;
-//    }
-//    .cd-stretchy-nav .stretchy-nav-bg {
-//        width: 99%;
-//    }
-//}
-//
-///* notebooks */
-//
-//@media (min-width: 992px) {
-//    .cd-stretchy-nav {
-//        margin-top: 100px;
-//        padding-left: 74%;
-//    }
-//}
-//
-///* desktops */
-//
-//@media (min-width: 1600px) {
-//    .cd-stretchy-nav {
-//        margin-top: 110px;
-//        padding-left: 71%;
-//    }
-//    .cd-stretchy-nav .stretchy-nav-bg {
-//        width: 70%;
-//    }
-//}
 
 /* Small devices (tablets, 768px and up) */
 
 @media (max-width: 768px) {
-    .cd-stretchy-nav {
-        margin-top: 5%;
-        padding-left: 80%;
-    }
-    .cd-stretchy-nav .stretchy-nav-bg {
-        width: 99%;
-    }
     .main-nav li {
         width: auto;
     }
@@ -53,9 +12,12 @@
         top: 47%;
     }
     footer{
-        height: 100px;
+        height: 50px;
         transition: all 2s ease-in-out;
     } 
+    .onepage-pagination{
+        display: none;
+    }
 }
 
 
@@ -69,19 +31,26 @@
 /* Large devices (large desktops, 1200px and up) */
 
 @media (min-width: 1200px) {
+    .viewing-page-1 .cd-header {
+    opacity: 0;
+    transition-delay: 5s;
+    transition: opacity 0.6s ease-out;
+}
+
+.viewing-page-2 .cd-header,
+.viewing-page-3 .cd-header,
+.viewing-page-4 .cd-header,
+.viewing-page-5 .cd-header,
+{
+    opacity: 1;
+    transition: opacity 1s ease;
+}
 }
 
 
 /* retina */
 
 @media (max-width: 2881px) {
-    .cd-stretchy-nav {
-        top: 3%;
-        right: 10%;
-    }
-     .cd-stretchy-nav .stretchy-nav-bg {
-        width: 1000px;
-    }
     .contact-section .text-center{
         margin-top: 50px;
     }

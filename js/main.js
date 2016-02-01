@@ -23,43 +23,36 @@
 //});
 
 //animated-MENU
-jQuery(document).ready(function(){
-	if( $('.cd-stretchy-nav').length > 0 ) {
-		var stretchyNavs = $('.cd-stretchy-nav');
-		
-		stretchyNavs.each(function(){
-			var stretchyNav = $(this),
-				stretchyNavTrigger = stretchyNav.find('.cd-nav-trigger');
-			
-			stretchyNavTrigger.on('click', function(event){
-				event.preventDefault();
-				stretchyNav.toggleClass('nav-is-visible');
-			});
-		});
+jQuery(document).ready(function($){
+	//if you change this breakpoint in the style.css file (or _layout.scss if you use SASS), don't forget to update this value as well
+	var MQL = 1170;
 
-		$(document).on('click', function(event){
-			( !$(event.target).is('.cd-nav-trigger') && !$(event.target).is('.cd-nav-trigger span') ) && stretchyNavs.removeClass('nav-is-visible');
-		});
+	//primary navigation slide-in effect
+	if($(window).width() > MQL) {
+		var headerHeight = $('.cd-header').height();
+		$(window).on('scroll',
+		{
+	        previousTop: 0
+	    });
 	}
+
+	//open/close primary navigation
+	$('.cd-primary-nav-trigger').on('click', function(){
+		$('.cd-menu-icon').toggleClass('is-clicked'); 
+		$('.cd-header').toggleClass('menu-is-open');
+		
+		//in firefox transitions break when parent overflow is changed, so we need to wait for the end of the trasition to give the body an overflow hidden
+		if( $('.cd-primary-nav').hasClass('is-visible') ) {
+			$('.cd-primary-nav').removeClass('is-visible').one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend',function(){
+				$('body').removeClass('overflow-hidden');
+			});
+		} else {
+			$('.cd-primary-nav').addClass('is-visible').one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend',function(){
+				$('body').addClass('overflow-hidden');
+			});	
+		}
+	});
 });
-
-//jQuery(document).ready(function($){
-//	//open menu
-//	$('.cd-menu-trigger').on('click', function(event){
-//		event.preventDefault();
-//		$('#main-nav').addClass('is-visible').data('targetid');
-//		$('.cd-shadow-layer').addClass('is-visible');
-//	});
-//	//close menu
-//	$('.cd-close-menu').on('click', function(event){
-//		event.preventDefault();
-//		$('#main-nav').removeClass('is-visible');
-//		$('.cd-shadow-layer').removeClass('is-visible');
-//	});
-//});
-
-
-
 
 // Floating label headings for the contact form
 $(function() {

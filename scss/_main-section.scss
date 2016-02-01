@@ -17,21 +17,6 @@
     }
 }
 
-.viewing-page-1 .cd-stretchy-nav {
-    opacity: 0;
-    transition-delay: 5s;
-    transition: opacity 0.6s ease-out;
-}
-
-.viewing-page-2 .cd-stretchy-nav,
-.viewing-page-3 .cd-stretchy-nav,
-.viewing-page-4 .cd-stretchy-nav,
-.viewing-page-5 .cd-stretchy-nav,
-{
-    opacity: 1;
-    transition: opacity 1s ease;
-}
-
 
 /* Header */
 .overlay {
