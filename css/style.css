@@ -432,16 +432,13 @@ body {
 }
 
 /* Header */
-.overlay {
+.bg-video:after {
+  content: ' ';
   background-color: rgba(0, 0, 0, 0.5);
   height: 100%;
   position: absolute;
+  transition-duration: 1s;
   width: 100%;
-  z-index: 1;
-}
-
-.header {
-  z-index: 2;
 }
 
 .bg-video {
@@ -453,7 +450,6 @@ body {
   bottom: 0;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
-  background-color: rgba(0, 0, 0, 0.3);
 }
 
 .bg-video video {
@@ -476,10 +472,6 @@ body {
   backface-visibility: hidden;
   background: url(/images/print.jpg) no-repeat center;
   background-size: cover;
-}
-
-.container .services-section {
-  width: 700px !important;
 }
 
 .services-section {
@@ -508,38 +500,47 @@ body {
 
 .img1 {
   background: url(/images/pack.png);
+  background-size: 100%;
   height: 377px;
   width: 100%;
 }
 
 .img2 {
   background: url(/images/offset.png);
+  background-size: 100%;
   height: 377px;
   width: 100%;
 }
 
 .img3 {
   background: url(/images/adv.png);
+  background-size: 100%;
   height: 377px;
   width: 100%;
 }
 
 .img4 {
   background: url(/images/etc.png);
+  background-size: 100%;
   height: 377px;
   width: 100%;
+}
+
+.border {
+  overflow: hidden;
+}
+
+.img1:hover,
+.img2:hover,
+.img3:hover,
+.img4:hover {
+  background-size: 160%;
+  transition: all 7s ease-in-out;
 }
 
 /* Small devices (tablets, 768px and up) */
 /* Medium devices (desktops, 992px and up) */
 /* Large devices (large desktops, 1200px and up) */
-@media (min-width: 1200px) {
-  .services .col-lg-6 {
-    width: 200px !important;
-    height: 200px !important;
-  }
-}
-
 .products-section .container-fluid {
   padding: 0;
   height: 60vh;
@@ -577,7 +578,7 @@ body {
   content: '';
   background-color: #000;
   height: 100%;
-  opacity: 0.5;
+  opacity: 0.7;
   position: absolute;
   width: 100%;
 }
@@ -589,11 +590,16 @@ body {
 }
 
 .products-section .block-2 ul {
-  list-style: disc outside none;
+  list-style: none inside;
 }
 
-.products-section .block-2 ul li {
-  margin-left: 15px;
+.products-section .block-2 ul li:before {
+  content: "\2012";
+  margin-right: 5px;
+}
+
+.products-section .block-2 .modLi {
+  font-size: 2vh;
 }
 
 .products-section .block-3 {
@@ -620,7 +626,7 @@ body {
   content: '';
   background-color: #000;
   height: 100%;
-  opacity: 0.5;
+  opacity: 0.7;
   position: absolute;
   width: 100%;
 }
@@ -633,11 +639,17 @@ body {
   top: 68vh;
 }
 
+.carousel-wrapper a:nth-child(2) {
+  margin-left: 10px;
+}
+
 /* Small devices (tablets, 768px and up) */
 /* Medium devices (desktops, 992px and up) */
 /* Large devices (large desktops, 1200px and up) */
 .partners-section {
   background: white !important;
+  height: 100vh !important;
+  width: 100vw !important;
 }
 
 .partners-section img {
@@ -723,7 +735,7 @@ footer {
   /* Set the fixed height of the footer here */
   height: 170px;
   border-top: 7px solid #1cbbb4;
-  transition: all .5s ease-in-out;
+  transition: all 1s ease-in-out .4s;
 }
 
 .viewing-page-1 footer,
@@ -732,7 +744,12 @@ footer {
 .viewing-page-4 footer {
   opacity: 0;
   transform: translateY(170px);
-  transition: all .5s ease-in-out;
+  transition: all 1s ease-in-out;
+}
+
+.contact-section {
+  height: 100vh !important;
+  width: 100vw !important;
 }
 
 .contact-section .center {
@@ -753,6 +770,13 @@ footer {
   .cd-primary-nav {
     padding: 30% 0 !important;
   }
+  .cd-primary-nav-trigger {
+    width: 42px !important;
+    height: 35px !important;
+    box-shadow: none;
+    right: 3%;
+    top: 5%;
+  }
   .main-section h1 {
     font-size: 15vw;
   }
@@ -761,11 +785,6 @@ footer {
   }
   .main-section h3 {
     font-size: 3vw;
-  }
-  .cd-primary-nav-trigger {
-    width: 42px !important;
-    height: 35px !important;
-    box-shadow: none;
   }
   .services-section hr {
     width: 25vw;
@@ -796,10 +815,44 @@ footer {
     top: 14%;
   }
   .products-section h3 {
-    margin-top: 0 !important;
+    margin-top: 10px !important;
+    font-size: 6vw;
   }
-  .partners-section {
+  .products-section p {
+    font-size: 2.5vw;
+  }
+  .products-section hr {
+    width: 30vw;
+    margin: 8px 0;
+  }
+  .products-section li {
+    font-size: 2.6vw;
+  }
+  .products-section .container-fluid {
     height: 100vh;
+  }
+  .products-section .block-2,
+  .products-section .block-3 {
+    width: 100vw !important;
+  }
+  .products-section .block-2 img,
+  .products-section .block-3 img {
+    width: 100vw !important;
+  }
+  .products-section .block-2 {
+    height: 55vh;
+    padding: 0 15px !important;
+  }
+  .products-section .block-3 {
+    height: 45vh;
+  }
+  .products-section .carousel-wrapper {
+    left: 30vw;
+    top: 88vh;
+  }
+  .products-section .carousel-wrapper img {
+    height: 20vw;
+    width: 20vw;
   }
   .partners-section h1 {
     font-size: 12vw;
@@ -817,9 +870,6 @@ footer {
   }
   .partners-section .center {
     top: 47%;
-  }
-  .contact-section {
-    height: 100vh;
   }
   .contact-section h1 {
     font-size: 12vw;
@@ -844,13 +894,52 @@ footer {
   .onepage-pagination {
     display: none;
   }
-  .cd-primary-nav-trigger {
-    right: 3%;
-    top: 5%;
-  }
 }
 
 /* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1199px) {
+  .services-section .img1,
+  .services-section .img2,
+  .services-section .img3,
+  .services-section .img4 {
+    height: 40vh;
+  }
+  .products-section .block-2 {
+    padding: 0 10px !important;
+    overflow: scroll !important;
+  }
+  .products-section h3 {
+    font-size: 2.1vw;
+    margin-top: -4px !important;
+  }
+  .products-section p {
+    font-size: 1.5vh;
+  }
+  .products-section li {
+    font-size: 1.5vh;
+  }
+  .contact-section h1 {
+    font-size: 5vw;
+    padding-bottom: 0;
+    padding-top: 3vh;
+  }
+  .contact-section p {
+    font-size: 2vh;
+  }
+  .contact-section .social-icons {
+    padding-top: 2vh !important;
+    padding: 0;
+  }
+  .contact-section .social-icons img {
+    padding-left: 1vw;
+    height: 5vw;
+    width: 6vw;
+  }
+  footer {
+    height: 100px !important;
+  }
+}
+
 /* Large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
   .viewing-page-1 .cd-header {
@@ -865,10 +954,13 @@ footer {
     opacity: 1;
     transition: opacity 1s ease;
   }
+  .carousel-wrapper {
+    left: 45.2vw;
+  }
 }
 
 /* retina */
-@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+@media only screen and (min-width: 2878px) {
   .contact-section .text-center {
     margin-top: 50px;
   }

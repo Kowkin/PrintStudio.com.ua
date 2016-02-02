@@ -19,18 +19,18 @@
 
 
 /* Header */
-.overlay {
-    background-color: rgba(0, 0, 0, .5);
-    height: 100%;
-    position: absolute;
-    width: 100%;
-    z-index: 1;
-}
 
-.header {
-    z-index: 2;
+//.header {
+//    z-index: 2;
+//}
+.bg-video:after{
+    content: ' ';
+	background-color: rgba(0, 0, 0, .5);
+	height: 100%;
+	position: absolute;
+    transition-duration: 1s;
+	width: 100%;
 }
-
 .bg-video {
     position: absolute;
     overflow: hidden;
@@ -40,7 +40,6 @@
     bottom: 0;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
-    background-color: rgba(0, 0, 0, .3);
     video {
         position: absolute;
         top: 0;
@@ -51,15 +50,6 @@
     }
 }
 
-//.bg-video::after{
-//    content: ' ';
-//	background-color: #000;
-//	height: 100%;
-//	opacity: 0.8;
-//	position: absolute;
-//    transition: all 1s ease;
-//	width: 100%;
-//}
 
 .bg-header {
     position: absolute;
