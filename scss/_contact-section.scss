@@ -1,67 +1,68 @@
 #success {
-    width: 100%;
-    padding: 10px;
-    text-align: center;
-    color: green;
-    display: none;
+	width: 100%;
+	padding: 10px;
+	text-align: center;
+	color: green;
+	display: none;
 }
 
 #error {
-    width: 100%;
-    padding: 10px;
-    text-align: center;
-    color: red;
-    display: none;
+	width: 100%;
+	padding: 10px;
+	text-align: center;
+	color: red;
+	display: none;
 }
 
 .btn-contact {
-    background-color: #29b0aa!important;
-    width: 100%;
-    font-size: 22px!important;
-    color: white;
-    font-weight: 700!important;
-    text-transform: uppercase;
-    padding: 0 12px!important;
+	background-color: #29b0aa!important;
+	width: 100%;
+	font-size: 22px!important;
+	color: white;
+	font-weight: 700!important;
+	text-transform: uppercase;
+	padding: 0 12px!important;
 }
 
 .custom-form .col-lg-6 {
-    padding: 0;
+	padding: 0;
 }
 
 .contact-text {
-    text-align: left;
-    padding-top: 20px;
-    line-height: 0.7;
-    font-weight: 500!important;
+	text-align: left;
+	padding-top: 20px;
+	line-height: 0.7;
+	font-weight: 500!important;
 }
 
 footer {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    opacity: 1;
-    /* Set the fixed height of the footer here */
-    height: 170px;
-    border-top: 7px solid #1cbbb4;
-    transition-delay: 3s;
-    transition: all 3s ease-in-out;
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	opacity: 1;
+	/* Set the fixed height of the footer here */
+	height: 170px;
+	border-top: 7px solid #1cbbb4;
+	transition: all .5s ease-in-out;
 }
 
 .viewing-page-1 footer,
 .viewing-page-2 footer,
 .viewing-page-3 footer,
 .viewing-page-4 footer {
-    opacity: 0;
-    transition: all .2s ease-in-out;
+	opacity: 0;
+	transform: translateY(170px);
+	transition: all .5s ease-in-out;
 }
 
 .contact-section .center {
-    top: 45%;
+	top: 45%;
 }
-.social-icons{
-    padding-top: 68px; 
-    padding-right: 200px;
-    img{
-        padding-left: 25px
-    }
+
+.social-icons {
+	padding-top: 68px;
+	padding-right: 200px;
+	img {
+		padding-left: 25px
+	}
 }
