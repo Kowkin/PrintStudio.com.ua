@@ -1,4 +1,3 @@
-@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,800,700);
 body {
   font-family: "Open Sans", sans-serif !important;
 }
@@ -547,7 +546,7 @@ body {
 }
 
 .img4 .service-inside-center {
-  top: 35%;
+  top: 33%;
 }
 
 .img1:hover,
@@ -555,12 +554,9 @@ body {
 .img3:hover,
 .img4:hover {
   background-size: 160%;
-  transition: all 7s ease-in-out .6s;
+  transition: all 7s ease-in-out .4s;
 }
 
-/* Small devices (tablets, 768px and up) */
-/* Medium devices (desktops, 992px and up) */
-/* Large devices (large desktops, 1200px and up) */
 .products-section .container-fluid {
   padding: 0;
   height: 60vh;
@@ -786,7 +782,7 @@ footer {
 }
 
 /* Small devices */
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
   .cd-primary-nav {
     padding: 30% 0 !important;
   }
@@ -917,7 +913,7 @@ footer {
 }
 
 /* Medium devices (desktops, 992px and up) */
-@media (min-width: 992px) and (max-width: 1199px) {
+@media screen and (min-width: 992px) and (max-width: 1199px) {
   .services-section .img1,
   .services-section .img2,
   .services-section .img3,
@@ -963,7 +959,7 @@ footer {
 }
 
 /* Large devices (large desktops, 1200px and up) */
-@media (min-width: 1200px) {
+@media screen and (min-width: 1200px) {
   .viewing-page-1 .cd-header {
     opacity: 0;
     transition-delay: 5s;
@@ -982,19 +978,22 @@ footer {
 }
 
 /* retina */
-@media only screen and (min-width: 2878px) {
+@media (min-width: 1440px) and (max-width: 2881px) {
   .contact-section .text-center {
-    margin-top: 50px;
+    margin-top: 30px;
+  }
+  .img4 .service-inside-center {
+    top: 32.5%;
   }
   .products-section h3 {
-    margin-top: -4px !important;
+    margin-top: -3.5px;
     font-size: 3vh;
   }
   .products-section p {
     font-size: 1.65vh;
   }
   footer {
-    height: 140px;
+    height: 130px;
     transition-delay: 4s;
     transition: all 1s ease-in-out;
   }

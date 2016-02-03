@@ -63,7 +63,7 @@
     width: 100%;
     transition: all 2s ease;
     .service-inside-center{
-        top: 35%;
+        top: 33%;
     }
 }
 
@@ -73,22 +73,6 @@
 .img4 {
     &:hover {
         background-size: 160%;
-        transition: all 7s ease-in-out .6s;
+        transition: all 7s ease-in-out .4s;
     }
 }
-
-//MEDIA
-
-/* Small devices (tablets, 768px and up) */
-
-@media (min-width: 768px) {}
-
-
-/* Medium devices (desktops, 992px and up) */
-
-@media (min-width: 992px) {}
-
-
-/* Large devices (large desktops, 1200px and up) */
-
-@media (min-width: 1200px) {}

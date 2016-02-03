@@ -7,13 +7,42 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <title>PRINT.Studio</title>
-    <link rel="shortcut icon" href="">
+<!--    <link rel="shortcut icon" href="">-->
     <!--    CSS-->
     <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type='text/css' href="css/reset.css">
     <link rel="stylesheet" type='text/css' href="css/style.css">
     <link rel="stylesheet" type='text/css' href="css/hover.css">
     <link rel="stylesheet" type='text/css' href="css/bootstrap.css">
+    <!--    JS-->
+<script src="js/jquery2.2.0.js"></script>
+<script src="js/main.js"></script>
+<script src="js/bootstrap/bootstrap.min.js"></script>
+<script src="js/jquery.onepage-scroll.js"></script>
+<script>
+    $(document).ready(function () {
+        $('.main').onepage_scroll({
+            sectionContainer: "section",
+            easing: "ease-in-out",
+            animationTime: 1000,
+            pagination: true,
+            updateURL: false,
+            loop: false,
+            keyboard: true,
+            responsiveFallback: false,
+        });
+        $('a.onepagescroll').click(function (e) {
+            e.preventDefault();
+            $(".main").moveTo($(this).data('targetid'));
+        });
+    });
+
+    $(document).ready(function () {
+        $('.carousel').carousel({
+            interval: false
+        });
+    });
+</script>
 
 </head>
 
@@ -47,10 +76,10 @@
                     <source src="images/print.mp4" type="video/mp4"></source>
                 </video>
             </div>
-            <!--
+            
             <div class="hidden-lg hidden-md bg-header">
             </div>
--->
+
 
             <div class="container center header">
                 <div class="row">
@@ -92,7 +121,6 @@
             <div class="container center">
 
                 <div class="row">
-                    <border>
                         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 img1 hvr-underline-from-left">
                             <div class="service-inside-center">
                                 <h1 class="text-center">картонная упаковка</h1>
@@ -100,7 +128,6 @@
                                 <h4 class="text-center"><a class="onepagescroll" data-targetid="3" data-target="#carousel" data-slide-to="0">подробнее</a></h4>
                             </div>
                         </div>
-                    </border>
                     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 img2 hvr-underline-from-left">
                         <div class="service-inside-center">
                             <h1 class="text-center">календари</h1>
@@ -349,34 +376,4 @@
     </main>
 
 </body>
-<!--    JS-->
-<script src="js/jquery2.2.0.js"></script>
-<script src="js/main.js"></script>
-<script src="js/bootstrap/bootstrap.min.js"></script>
-<script src="js/jquery.onepage-scroll.js"></script>
-<script>
-    $(document).ready(function () {
-        $('.main').onepage_scroll({
-            sectionContainer: "section",
-            easing: "ease-in-out",
-            animationTime: 1000,
-            pagination: true,
-            updateURL: false,
-            loop: false,
-            keyboard: true,
-            responsiveFallback: false,
-        });
-        $('a.onepagescroll').click(function (e) {
-            e.preventDefault();
-            $(".main").moveTo($(this).data('targetid'));
-        });
-    });
-
-    $(document).ready(function () {
-        $('.carousel').carousel({
-            interval: false
-        });
-    });
-</script>
-
 </html>
