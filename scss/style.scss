@@ -1,4 +1,6 @@
-@import 'fontset';
+body {
+    font-family: 'Open Sans', sans-serif!important;
+}
 
 .gap-15 {
     height: 15px;
@@ -27,6 +29,7 @@
     -webkit-transform: translateX(-50%) translateY(-50%);
     transform: translateX(-50%) translateY(-50%);
 }
+
 
 @import 'onepagescroll';
 @import 'menu-animation';
