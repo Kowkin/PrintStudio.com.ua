@@ -377,7 +377,7 @@ body {
 .header h1 {
   color: #000;
   font-weight: 800;
-  font-size: 90px;
+  font-size: 8vw;
   margin: 0 auto;
   line-height: 1;
 }
@@ -772,6 +772,25 @@ footer {
     right: 3%;
     top: 5%;
   }
+  .main-section .header h1 {
+    color: #000;
+    font-weight: 800;
+    font-size: 17vw;
+    margin: 0 auto;
+    line-height: 1;
+  }
+  .main-section h2 {
+    font-size: 5vw;
+  }
+  .main-section h3 {
+    font-size: 3vw;
+  }
+  .main-section img {
+    width: 30vw;
+  }
+  .main-section hr {
+    margin: 10px auto -10px;
+  }
   .services-section hr {
     width: 25vw;
     border: 1.5px solid;
@@ -872,13 +891,13 @@ footer {
     font-size: 2vh;
   }
   .contact-section .social-icons {
-    padding-top: 5vh !important;
+    padding-top: 2vh !important;
     padding: 0;
   }
   .contact-section .social-icons img {
     padding-left: 1vw;
-    height: 11.5vh;
-    width: 12vh;
+    height: 9.5vh;
+    width: 10vh;
   }
   footer {
     display: none !important;
