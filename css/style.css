@@ -26,7 +26,8 @@ body {
   top: 50%;
   left: 50%;
   -webkit-transform: translateX(-50%) translateY(-50%);
-  transform: translateX(-50%) translateY(-50%);
+  -ms-transform: translateX(-50%) translateY(-50%);
+      transform: translateX(-50%) translateY(-50%);
 }
 
 /*Onepage scroll*/
@@ -34,8 +35,6 @@ body,
 html {
   margin: 0;
   overflow: hidden;
-  -webkit-transition: opacity 400ms;
-  -moz-transition: opacity 400ms;
   transition: opacity 400ms;
 }
 
@@ -112,8 +111,6 @@ Primary style
 *,
 *:after,
 *:before {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -151,14 +148,10 @@ body {
 
 @media only screen and (min-width: 1170px) {
   .cd-header {
-    -webkit-transition: background-color 0.3s;
-    -moz-transition: background-color 0.3s;
     transition: background-color 0.3s;
     /* Force Hardware Acceleration in WebKit */
     -webkit-transform: translate3d(0, 0, 0);
-    -moz-transform: translate3d(0, 0, 0);
     -ms-transform: translate3d(0, 0, 0);
-    -o-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
@@ -181,15 +174,11 @@ body {
   bottom: auto;
   right: auto;
   -webkit-transform: translateX(-50%) translateY(-50%);
-  -moz-transform: translateX(-50%) translateY(-50%);
   -ms-transform: translateX(-50%) translateY(-50%);
-  -o-transform: translateX(-50%) translateY(-50%);
   transform: translateX(-50%) translateY(-50%);
   width: 35px;
   height: 4px;
   background-color: #29b0aa;
-  -webkit-transition: background-color 0.3s;
-  -moz-transition: background-color 0.3s;
   transition: background-color 0.3s;
   /* these are the upper and lower lines in the menu icon */
 }
@@ -202,9 +191,9 @@ body {
   position: absolute;
   background-color: #29b0aa;
   right: 0;
-  -webkit-transition: -webkit-transform .3s, top .3s, background-color 0s;
-  -moz-transition: -moz-transform .3s, top .3s, background-color 0s;
+  transition: top .3s, background-color 0s, -webkit-transform .3s;
   transition: transform .3s, top .3s, background-color 0s;
+  transition: transform .3s, top .3s, background-color 0s, -webkit-transform .3s;
 }
 
 .cd-primary-nav-trigger .cd-menu-icon::before {
@@ -227,18 +216,14 @@ body {
 .cd-primary-nav-trigger .cd-menu-icon.is-clicked::before {
   top: 0;
   -webkit-transform: rotate(135deg);
-  -moz-transform: rotate(135deg);
   -ms-transform: rotate(135deg);
-  -o-transform: rotate(135deg);
   transform: rotate(135deg);
 }
 
 .cd-primary-nav-trigger .cd-menu-icon.is-clicked::after {
   top: 0;
   -webkit-transform: rotate(225deg);
-  -moz-transform: rotate(225deg);
   -ms-transform: rotate(225deg);
-  -o-transform: rotate(225deg);
   transform: rotate(225deg);
 }
 
@@ -252,18 +237,14 @@ body {
     top: 10%;
     bottom: auto;
     -webkit-transform: translateY(-50%);
-    -moz-transform: translateY(-50%);
     -ms-transform: translateY(-50%);
-    -o-transform: translateY(-50%);
     transform: translateY(-50%);
   }
   .cd-primary-nav-trigger .cd-menu-icon {
     left: auto;
     right: 1em;
     -webkit-transform: translateX(0) translateY(-50%);
-    -moz-transform: translateX(0) translateY(-50%);
     -ms-transform: translateX(0) translateY(-50%);
-    -o-transform: translateX(0) translateY(-50%);
     transform: translateX(0) translateY(-50%);
   }
 }
@@ -285,15 +266,11 @@ body {
   /* this fixes the buggy scrolling on webkit browsers - mobile devices only - when overflow property is applied */
   -webkit-overflow-scrolling: touch;
   -webkit-transform: translateY(-100%);
-  -moz-transform: translateY(-100%);
   -ms-transform: translateY(-100%);
-  -o-transform: translateY(-100%);
   transform: translateY(-100%);
-  -webkit-transition-property: -webkit-transform;
-  -moz-transition-property: -moz-transform;
+  transition-property: -webkit-transform;
   transition-property: transform;
-  -webkit-transition-duration: 0.4s;
-  -moz-transition-duration: 0.4s;
+  transition-property: transform, -webkit-transform;
   transition-duration: 0.4s;
 }
 
@@ -311,8 +288,6 @@ body {
   display: inline-block;
   padding: .4em 1em;
   border-radius: 0.25em;
-  -webkit-transition: background 0.2s;
-  -moz-transition: background 0.2s;
   transition: background 0.2s;
   color: white;
   font-weight: 500;
@@ -329,9 +304,7 @@ body {
 
 .cd-primary-nav.is-visible {
   -webkit-transform: translateY(0);
-  -moz-transform: translateY(0);
   -ms-transform: translateY(0);
-  -o-transform: translateY(0);
   transform: translateY(0);
 }
 
@@ -488,7 +461,7 @@ body {
 .img1 {
   background: url(/images/pack.png);
   background-size: 100%;
-  height: 377px;
+  height: 50vh;
   width: 100%;
   transition: all 2s ease;
 }
@@ -496,7 +469,7 @@ body {
 .img2 {
   background: url(/images/offset.png);
   background-size: 100%;
-  height: 377px;
+  height: 50vh;
   width: 100%;
   transition: all 2s ease;
 }
@@ -504,19 +477,19 @@ body {
 .img3 {
   background: url(/images/promo.png);
   background-size: 100%;
-  height: 377px;
+  height: 50vh;
   width: 100%;
   transition: all 2s ease;
 }
 
 .img3 .service-inside-center {
-  top: 15%;
+  top: 16%;
 }
 
 .img4 {
   background: url(/images/etc.png);
   background-size: 100%;
-  height: 377px;
+  height: 50vh;
   width: 100%;
   transition: all 2s ease;
 }
@@ -731,7 +704,9 @@ footer {
 .viewing-page-3 footer,
 .viewing-page-4 footer {
   opacity: 0;
-  transform: translateY(170px);
+  -webkit-transform: translateY(170px);
+      -ms-transform: translateY(170px);
+          transform: translateY(170px);
   transition: all 1s ease-in-out;
 }
 
