@@ -1,4 +1,7 @@
 //NAVIGATION
+.navbar .col-lg-10{
+        padding-right: 0!important;
+    }
 .main-nav {
 	background-color: #252525;
 	position: relative;
@@ -12,8 +15,11 @@
 		color: #fff;
 		cursor: pointer
 	}
+    
 	li {
-		width: 179px;
+		width: 186px;
+        margin: 0;
+        padding: 0;
 	}
 }
 
