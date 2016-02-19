@@ -1,3 +1,32 @@
+//mail_to
+//setup email here
+$(function(){
+   $('#button-send').click(function (event) {
+        $('#button-send').html('Sending E-Mail...');
+        event.preventDefault();
+
+        $.ajax({
+            type: 'POST',
+            url: 'send.php',
+            data: $('#contact_form').serialize(),
+            success: function (html) {
+                if (html.success == '1') {
+                    $('#button-send').html('Send E-Mail');
+                    $('#success').show();
+                }
+                else {
+                    $('#button-send').html('Send E-Mail');
+                    $('#error').show();
+                }
+            },
+            error: function () {
+                $('#button-send').html('Send E-Mail');
+                $('#error').show();
+            }
+        });
+    }); 
+});
+
 //animated-MENU
 jQuery(document).ready(function ($) {
     //if you change this breakpoint in the style.css file (or _layout.scss if you use SASS), don't forget to update this value as well
@@ -55,4 +84,5 @@ $(function () {
         $(this).removeClass("floating-label-form-group-with-focus");
     });
 });
+
 

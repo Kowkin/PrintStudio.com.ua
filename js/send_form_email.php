@@ -1,13 +1,13 @@
 <?php 
 // EDIT THE 2 LINES BELOW AS REQUIRED
 $send_email_to = "kowkin89@gmail.com";
-$email_subject = "Заказ с сайта Sparkov.com.ua";
-function send_email($name,$email,$email_message, $number)
+$email_subject = "Заказ с сайта";
+function send_email($name,$email,$email_message, $nubmer)
 {
   global $send_email_to;
   global $email_subject;
   $headers = "MIME-Version: 1.0" . "\r\n";
-  $headers .= "Content-type:text/html;charset=utf-8" . "\r\n";
+  $headers .= "Content-type:text/html;charset=iso-8859-1" . "\r\n";
   $headers .= "From: ".$email. "\r\n";
   $message = "<strong>Email = </strong>".$email."<br>";
   $message .= "<strong>Name = </strong>".$name."<br>";  
@@ -16,7 +16,7 @@ function send_email($name,$email,$email_message, $number)
   @mail($send_email_to, $email_subject, $message,$headers);
   return true;
 }
-function validate($name,$email,$message)
+function validate($name,$email,$message,$number)
 {
   $return_array = array();
   $return_array['success'] = '1';
@@ -67,10 +67,10 @@ function validate($name,$email,$message)
 }
 $name = $_POST['name'];
 $email = $_POST['email'];
-$message = $_POST['message'];
 $number = $_POST['number'];
+$message = $_POST['message'];
 
-$return_array = validate($name,$email,$message);
+$return_array = validate($name,$email,$message,$number);
 if($return_array['success'] == '1')
 {
 	send_email($name,$email,$message,$number);

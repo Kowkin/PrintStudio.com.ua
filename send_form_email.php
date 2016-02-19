@@ -1,6 +1,6 @@
 <?php 
 // EDIT THE 2 LINES BELOW AS REQUIRED
-$send_email_to = "kowkin89@gmail.com";
+$send_email_to = "nikolaysparkov@gmail.com";
 $email_subject = "Заказ с сайта Sparkov.com.ua";
 function send_email($name,$email,$email_message, $number)
 {
@@ -10,13 +10,13 @@ function send_email($name,$email,$email_message, $number)
   $headers .= "Content-type:text/html;charset=utf-8" . "\r\n";
   $headers .= "From: ".$email. "\r\n";
   $message = "<strong>Email = </strong>".$email."<br>";
-  $message .= "<strong>Name = </strong>".$name."<br>";  
-  $message .= "<strong>Message = </strong>".$email_message."<br>";
-  $message .= "<strong>Number = </strong>".$number."<br>";
+  $message .= "<strong>Имя = </strong>".$name."<br>";  
+  $message .= "<strong>Номер = </strong>".$number."<br>";
+  $message .= "<strong>Сообщение = </strong>".$email_message."<br>";
   @mail($send_email_to, $email_subject, $message,$headers);
   return true;
 }
-function validate($name,$email,$message)
+function validate($email,$message,$number)
 {
   $return_array = array();
   $return_array['success'] = '1';
@@ -37,20 +37,31 @@ function validate($name,$email,$message)
       $return_array['email_msg'] = 'enter valid email.';  
     }
   }
-  if($name == '')
-  {
-    $return_array['success'] = '0';
-    $return_array['name_msg'] = 'name is required';
+//  if($name == '')
+//  {
+//    $return_array['success'] = '0';
+//    $return_array['name_msg'] = 'name is required';
+//  }
+//  else
+//  {
+//    $string_exp = "/^[A-Za-z .'-]+$/";
+//    if (!preg_match($string_exp, $name)) {
+//      $return_array['success'] = '0';
+//      $return_array['name_msg'] = 'enter valid name.';
+//    }
+//  }
+  if($number == '')
+{
+	  $return_array['success'] = '0';
+	  $return_array['number_msg'] = 'enter valid number.';
   }
-  else
-  {
-    $string_exp = "/^[A-Za-z .'-]+$/";
-    if (!preg_match($string_exp, $name)) {
-      $return_array['success'] = '0';
-      $return_array['name_msg'] = 'enter valid name.';
-    }
-  }
-		
+	else{
+		$number_exp = "/^[0-9+ ]+$/";
+		 if(!preg_match($number_exp,$number)){
+		   	$return_array['success'] = '0';
+			 $return_array['number_msg'] = 'enter valid email.';  
+		 }
+	}
   if($message == '')
   {
     $return_array['success'] = '0';
@@ -58,7 +69,7 @@ function validate($name,$email,$message)
   }
   else
   {
-    if (strlen($message) < 2) {
+    if(strlen($message) < 2) {
       $return_array['success'] = '0';
       $return_array['message_msg'] = 'enter valid message.';
     }
@@ -70,7 +81,7 @@ $email = $_POST['email'];
 $message = $_POST['message'];
 $number = $_POST['number'];
 
-$return_array = validate($name,$email,$message);
+$return_array = validate($email,$message,$number);
 if($return_array['success'] == '1')
 {
 	send_email($name,$email,$message,$number);
