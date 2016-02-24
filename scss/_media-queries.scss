@@ -196,19 +196,22 @@
     			h3 {
     				margin-top: 20px;
     				margin-bottom: 10px;
+                    line-height: 1;
     			}
     		}
     		h2 {
-    			font-size: 5vw;
+    			font-size: 8vw;
+                line-height: 1;
     		}
     		h3 {
-    			font-size: 3vw;
+    			font-size: 4vw;
+                line-height: 1;
     		}
     		img {
     			width: 30vw;
     		}
     		hr {
-    			margin: 10px auto -10px;
+    			margin: 10px auto 10px;
     		}
     	}
     	//    SERVICE
@@ -232,7 +235,7 @@
     			height: 25vh;
     		}
     		.service-inside-center {
-    			top: 22%;
+    			top: 26%;
     		}
     	}
     	//    PRODUCT
@@ -314,8 +317,7 @@
     			font-size: 2vh;
     		}
     		.social-icons {
-    			padding-top: 2vh!important;
-    			padding: 0;
+    			padding-top: 3vh!important;
     			img {
     				padding-left: 1vw;
     				height: 9.5vh;
@@ -477,7 +479,7 @@
     	}
     }
     @media (device-aspect-ratio: 1366/768),
-    (device-aspect-ratio: 1360/768) {
+    (device-aspect-ratio: 1366/768) {
     	.cd-primary-nav {
     		height: auto;
     		padding-top: 10%!important;
@@ -517,13 +519,22 @@
     			font-size: 3vh;
     		}
     		p {
-    			font-size: 1.65vh;
+    			font-size: 2vh;
     		}
     		.container-fluid {
     			padding: 0;
     			height: 70vh;
     		}
+            li{
+                font-size: 2vh;
+            }
+            .carousel-wrapper {
+    		left: 43.5vw;
     	}
+    	}
+        .partners-section{
+//            уменьшить сетку. 
+        }
     	footer {
     		height: 60px;
     		transition-delay: 4s;
