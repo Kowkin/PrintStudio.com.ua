@@ -1,389 +1,443 @@
 <!doctype html>
 <html lang="ru" class="no-js">
 
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="initial-scale=1, width=device-width, maximum-scale=1, minimum-scale=1, user-scalable=yes">
-	<meta name="description" content="">
-	<meta name="author" content="">
-	<title>PrintStudio</title>
-	<!--    <link rel="shortcut icon" href="">-->
-	<!--    CSS-->
-	<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700' rel='stylesheet' type='text/css'>
-	<link rel="stylesheet" type='text/css' href="css/reset.css">
-	<link rel="stylesheet" type='text/css' href="css/style.css">
-	<link rel="stylesheet" type='text/css' href="css/hover.css">
-	<link rel="stylesheet" type='text/css' href="css/bootstrap.css">
-	<!--    JS-->
-	<script src="js/jquery2.2.0.js"></script>
-	<script src="js/fakeLoader.min.js"></script>
-	<script src="js/main.js"></script>
-	<script src="js/bootstrap/bootstrap.min.js"></script>
-	<script src="js/jquery.onepage-scroll.js"></script>
-	<script>
-		$(document).ready(function() {
-			$("#preLoader").fakeLoader({
-				timeToHide: 700, //Time in milliseconds for fakeLoader disappear
-				zIndex: "999", //Default zIndex
-				spinner: "spinner4", //Options: 'spinner1', 'spinner2', 'spinner3', 'spinner4', 'spinner5', 'spinner6', 'spinner7'
-				bgColor: "#292929", //Hex, RGB or RGBA colors
-			});
-			$('.main').onepage_scroll({
-				sectionContainer: "section",
-				easing: "ease-in-out",
-				animationTime: 1000,
-				pagination: true,
-				updateURL: false,
-				loop: false,
-				keyboard: true,
-				responsiveFallback: false,
-			});
-			$('a.onepagescroll').click(function(e) {
-				e.preventDefault();
-				$(".main").moveTo($(this).data('targetid'));
-			});
-			$('.carousel').carousel({
-				interval: false
-			});
-		});
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1, width=device-width, maximum-scale=1, minimum-scale=1, user-scalable=yes">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>PrintStudio</title>
+    <!--    <link rel="shortcut icon" href="">-->
+    <!--    CSS-->
+    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type='text/css' href="css/reset.css">
+    <link rel="stylesheet" type='text/css' href="css/style.css">
+    <link rel="stylesheet" type='text/css' href="css/hover.css">
+    <link rel="stylesheet" type='text/css' href="css/bootstrap.css">
+    <!--    JS-->
+    <script src="js/jquery2.2.0.js"></script>
+    <script src="js/fakeLoader.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/bootstrap/bootstrap.min.js"></script>
+    <script src="js/jquery.onepage-scroll.js"></script>
+    <script>
+      $(document).ready(function() {
+        $("#preLoader").fakeLoader({
+          timeToHide: 700, //Time in milliseconds for fakeLoader disappear
+          zIndex: "999", //Default zIndex
+          spinner: "spinner4", //Options: 'spinner1', 'spinner2', 'spinner3', 'spinner4', 'spinner5', 'spinner6', 'spinner7'
+          bgColor: "#292929", //Hex, RGB or RGBA colors
+        });
+        $('#fullpage').fullpage({
+          //Navigation
+          menu: '#menu',
+          anchors: [
+            'main', 'services', 'products', 'partners', 'contacts'
+          ],
+          navigation: true,
+          navigationPosition: 'right',
 
-	</script>
-</head>
+          //Scrolling
+          css3: true,
+          scrollingSpeed: 800,
+          autoScrolling: true,
+          fitToSection: true,
+          fitToSectionDelay: 2000,
+          easing: 'easeInOutCubic',
+          easingcss3: 'ease',
+          loopHorizontal: true,
+          continuousVertical: true,
+          touchSensitivity: 15,
+          normalScrollElementTouchThreshold: 5,
 
-<body>
-	<div id="preLoader"></div>
-	<!--   NAVIGATION-->
-	<a class="cd-header cd-primary-nav-trigger" href="#0">
-		<span class="cd-menu-icon"></span>
-	</a>
-	<!-- cd-primary-nav-trigger -->
-	<nav>
-		<ul class="cd-primary-nav center">
-			<li>
-				<a class="onepagescroll" data-targetid="1">Главная</a></li>
-			<li>
-				<a class="onepagescroll" data-targetid="2">Услуги</a></li>
-			<li>
-				<a class="onepagescroll" data-targetid="3">Продукция</a></li>
-			<li>
-				<a class="onepagescroll" data-targetid="4">Партнеры</a></li>
-			<li>
-				<a class="onepagescroll" data-targetid="5">Контакты</a></li>
-		</ul>
-	</nav>
-	<!--   NAVIGATION-->
-	<main class="main">
-		<!--           MAIN-->
-		<section class="cd-main-content main-section">
-			<div class="bg-video hidden-xs">
-				<video preload="auto" autoplay="autoplay" loop="loop" poster="images/print.jpg">
-					<source src="images/print.webm" type="video/webm"></source>
-					<source src="images/print.mp4" type="video/mp4"></source>
-				</video>
-			</div>
+          //Accessibility
+          keyboardScrolling: true,
+          animateAnchor: true,
+          recordHistory: true,
 
-			<div class="hidden-lg hidden-md bg-header">
-			</div>
+          //Custom selectors
+          sectionSelector: 'section',
+        });
+        $('.carousel').carousel({interval: false});
+        $(document).on('click', '#moveTo', function() {
+          $.fn.fullpage.moveTo('products');
+        });
+      });
 
-			<div class="container center header">
-				<div class="row">
-					<div class="logo col-lg-2 col-lg-offset-5 text-center">
-						<img src="images/logo.png">
-						<div class="gap-30 hidden-sm"></div>
-					</div>
-					<!--                    navbar-->
-					<nav class="navbar col-lg-10 col-lg-push-1 hidden-sm hidden-xs">
-						<ul class="nav navbar-nav main-nav text-center">
-							<li class="hoverup1 col-lg-2">
-								<a class="onepagescroll" data-targetid="1">Главная</a></li>
-							<li class="hvr-underline-from-left col-lg-2">
-								<a class="onepagescroll" data-targetid="2">Услуги</a></li>
-							<li class="hvr-underline-from-left col-lg-2">
-								<a class="onepagescroll" data-targetid="3">Продукция</a></li>
-							<li class="hvr-underline-from-left col-lg-2">
-								<a class="onepagescroll" data-targetid="4">Партнеры</a></li>
-							<li class="hoverup2 col-lg-2">
-								<a class="onepagescroll" data-targetid="5">Контакты</a></li>
-						</ul>
-					</nav>
-					<!--                END NAV-->
-					<div class="gap-30 hidden-xs hidden-sm"></div>
-					<div class="col-lg-12 col-sm-12">
-						<h1 style="color:white;"><span style="font-weight:900;">Print</span><span style="font-weight:100;">Studio</span></h1>
-						<hr>
-						<h2>СОВРЕМЕННАЯ<br class="visible-xs"/> ТИПОГРАФИЯ</h2>
-						<h3>ПОЛНЫЙ СПЕКТР<br class="visible-xs"/> ПОЛИГРАФИЧЕСКИХ УСЛУГ</h3>
-					</div>
-				</div>
-			</div>
-		</section>
+    </script>
+  </head>
 
-		<!--           SERVICE-->
+  <body>
+    <div id="preLoader"></div>
+    <!--   NAVIGATION-->
+    <a class="cd-header cd-primary-nav-trigger">
+      <span class="cd-menu-icon"></span>
+    </a>
+    <!-- cd-primary-nav-trigger -->
+    <nav>
+      <ul class="cd-primary-nav center">
+        <li data-menuanchor="section1">
+          <a href="#main">Главная</a>
+        </li>
+        <li data-menuanchor="section2">
+          <a href="#services">Услуги</a>
+        </li>
+        <li data-menuanchor="section3">
+          <a href="#products">Продукция</a>
+        </li>
+        <li data-menuanchor="section4">
+          <a href="#partners">Партнеры</a>
+        </li>
+        <li data-menuanchor="section5">
+          <a href="#contacts">Контакты</a>
+        </li>
+      </ul>
+    </nav>
+    <!--   NAVIGATION-->
+    <div id="fullpage">
+      <!--           MAIN-->
+      <section class="cd-main-content main-section">
+        <div class="bg-video hidden-xs">
+          <video preload="auto" autoplay="autoplay" loop="loop" poster="images/print.jpg">
+            <source src="images/print.webm" type="video/webm"></source>
+            <source src="images/print.mp4" type="video/mp4"></source>
+          </video>
+        </div>
 
-		<section class="services-section">
+        <div class="hidden-lg hidden-md bg-header"></div>
 
-			<div class="container-fluid center">
+        <div class="container center header">
+          <div class="row">
+            <div class="logo col-lg-2 col-lg-offset-5 text-center">
+              <img src="images/logo.png">
+              <div class="gap-30 hidden-sm"></div>
+            </div>
+            <!--                    navbar-->
+            <nav class="navbar col-lg-10 col-lg-push-1 hidden-sm hidden-xs">
+              <ul class="nav navbar-nav main-nav text-center">
+                <li class="hoverup1 col-lg-2" data-menuanchor="section1">
+                  <a href="#main">Главная</a>
+                </li>
+                <li class="hvr-underline-from-left col-lg-2" data-menuanchor="section2">
+                  <a href="#services">Услуги</a>
+                </li>
+                <li class="hvr-underline-from-left col-lg-2" data-menuanchor="section3">
+                  <a href="#products">Продукция</a>
+                </li>
+                <li class="hvr-underline-from-left col-lg-2" data-menuanchor="section4">
+                  <a href="#partners">Партнеры</a>
+                </li>
+                <li class="hoverup2 col-lg-2" data-menuanchor="section5">
+                  <a href="#contacts">Контакты</a>
+                </li>
+              </ul>
+            </nav>
+            <!--                END NAV-->
+            <div class="gap-30 hidden-xs hidden-sm"></div>
+            <div class="col-lg-12 col-sm-12">
+              <h1 style="color:white;">
+                <span style="font-weight:900;">Print</span>
+                <span style="font-weight:100;">Studio</span>
+              </h1>
+              <hr>
+              <h2>СОВРЕМЕННАЯ<br class="visible-xs"/>
+                ТИПОГРАФИЯ</h2>
+              <h3>ПОЛНЫЙ СПЕКТР<br class="visible-xs"/>
+                ПОЛИГРАФИЧЕСКИХ УСЛУГ</h3>
+            </div>
+          </div>
+        </div>
+      </section>
 
-				<div class="row">
-					<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 img1 hvr-underline-from-left">
-						<div class="service-inside-center">
-							<h1 class="text-center"><a class="onepagescroll" data-targetid="3" data-target="#carousel" data-slide-to="0">картонная упаковка</a></h1>
-							<hr class="hidden-xs"/>
-							<h4 class="text-center hidden-xs"><a class="onepagescroll" data-targetid="3" data-target="#carousel" data-slide-to="0">подробнее</a></h4>
-						</div>
-					</div>
-					<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 img2 hvr-underline-from-left">
-						<div class="service-inside-center">
-							<h1 class="text-center"><a class="onepagescroll" data-targetid="3" data-target="#carousel" data-slide-to="1">календари</a></h1>
-							<hr class="hidden-xs"/>
-							<h4 class="text-center hidden-xs"><a class="onepagescroll" data-targetid="3" data-target="#carousel" data-slide-to="1">подробнее</a></h4>
-						</div>
-					</div>
-				</div>
+      <!--           SERVICE-->
 
-				<div class="row">
-					<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 img3 hvr-underline-from-left">
-						<div class="service-inside-center">
-							<h1 class="text-center hidden-xs hidden-sm"><a class="onepagescroll" data-targetid="3" data-target="#carousel" data-slide-to="2">рекламно-<br>информационная<br>продукция</h1>
-							<h1 class="visible-xs visible-sm text-center">рекламная<br class="hidden-xs hidden-sm"> продукция</a></h1>
-							<hr class="hidden-xs"/>
-							<h4 class="text-center hidden-xs"><a class="onepagescroll" data-targetid="3" data-target="#carousel" data-slide-to="2">подробнее</a></h4>
-						</div>
-					</div>
+      <section class="services-section">
 
-					<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 img4 hvr-underline-from-left">
-						<div class="service-inside-center">
-							<h1 class="text-center"><a class="onepagescroll" data-targetid="3" data-target="#carousel" data-slide-to="3">другое</a></h1>
-							<hr class="hidden-xs"/>
-							<h4 class="text-center hidden-xs"><a class="onepagescroll" data-targetid="3" data-target="#carousel" data-slide-to="3">подробнее</a></h4>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
+        <div class="container-fluid center">
 
-		<!--           PRODUCTS-SECTION-->
+          <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 img1 hvr-underline-from-left">
+              <div class="service-inside-center">
+                <h1 class="text-center">
+                  <a class="onepagescroll" id="moveTo" data-target="#carousel" data-slide-to="0">картонная упаковка</a>
+                </h1>
+                <hr class="hidden-xs"/>
+                <h4 class="text-center hidden-xs">
+                  <a class="onepagescroll" id="moveTo" data-target="#carousel" data-slide-to="0">подробнее</a>
+                </h4>
+              </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 img2 hvr-underline-from-left">
+              <div class="service-inside-center">
+                <h1 class="text-center">
+                  <a class="onepagescroll" id="moveTo" data-target="#carousel" data-slide-to="1">календари</a>
+                </h1>
+                <hr class="hidden-xs"/>
+                <h4 class="text-center hidden-xs">
+                  <a class="onepagescroll" id="moveTo" data-target="#carousel" data-slide-to="1">подробнее</a>
+                </h4>
+              </div>
+            </div>
+          </div>
 
-		<section class="products-section">
-			<div class="carousel-wrapper">
-				<a href="#carousel" role="button" data-slide="prev">
-					<i aria-hidden="true"></i>
-					<img src="images/prev.png">
-				</a>
-				<a href="#carousel" role="button" data-slide="next">
-					<i aria-hidden="true"></i>
-					<img src="images/next.png">
-				</a>
-			</div>
-			<div id="carousel" class="carousel slide center" data-ride="carousel">
+          <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 img3 hvr-underline-from-left">
+              <div class="service-inside-center">
+                <h1 class="text-center hidden-xs hidden-sm">
+                  <a class="onepagescroll" id="moveTo" data-target="#carousel" data-slide-to="2">рекламно-<br>информационная<br>продукция</h1>
+                  <h1 class="visible-xs visible-sm text-center">рекламная<br class="hidden-xs hidden-sm">
+                    продукция</a>
+                </h1>
+                <hr class="hidden-xs"/>
+                <h4 class="text-center hidden-xs">
+                  <a class="onepagescroll" id="moveTo" data-target="#carousel" data-slide-to="2">подробнее</a>
+                </h4>
+              </div>
+            </div>
 
-				<!-- Wrapper for slides -->
-				<div class="carousel-inner container-fluid" role="listbox">
+            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 img4 hvr-underline-from-left">
+              <div class="service-inside-center">
+                <h1 class="text-center">
+                  <a class="onepagescroll" id="moveTo" data-target="#carousel" data-slide-to="3">другое</a>
+                </h1>
+                <hr class="hidden-xs"/>
+                <h4 class="text-center hidden-xs">
+                  <a class="onepagescroll" id="moveTo" data-target="#carousel" data-slide-to="3">подробнее</a>
+                </h4>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
-					<div class="item active">
+      <!--           PRODUCTS-SECTION-->
 
-						<div class="col-lg-3 col-md-3 col-sm-3 hidden-sm hidden-xs block-1">
-							<img src="images/eetc.jpg">
-						</div>
-						<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 text-left block-2">
-							<h3>Картонная упаковка<br class="visible-xs"/> любой сложности</h3>
-							<hr/>
-							<p>Данный вид полиграфической продукции может иметь большое количество комбинаций технических параметров, поэтому его сложно стандартизировать по материалам, размерам и другим параметрам.
-								<p>Исходя из этого, мы рекомендуем просчитывать стоимость продукции индивидуально, в соответствии с Вашими пожеланиями.</p>
-								<p>Мы не продаем готовую продукцию со склада! Мы производим продукцию, в соответствии с ее техническими параметрами, индивидуально для каждого Партнера!</p>
-								<p><b>Для просчета стоимости заказа необходимо указать следующие данные:</b></p>
-								<ul>
-									<li>Формат</li>
-									<li>Красочность</li>
-									<li>Плотность и вид картона</li>
-									<li>Дополнительная отделка</li>
-									<li>Тираж</li>
-								</ul>
-						</div>
-						<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 block-3">
-							<img src="images/package.jpg">
-						</div>
-						<div class="col-lg-3 col-md-3 col-sm-3 hidden-sm hidden-xs block-4">
-							<img src="images/calendar.jpg">
-						</div>
-					</div>
+      <section class="products-section">
+        <div class="carousel-wrapper">
+          <a href="#carousel" role="button" data-slide="prev">
+            <i aria-hidden="true"></i>
+            <img src="images/prev.png">
+          </a>
+          <a href="#carousel" role="button" data-slide="next">
+            <i aria-hidden="true"></i>
+            <img src="images/next.png">
+          </a>
+        </div>
+        <div id="carousel" class="carousel slide center" data-ride="carousel">
 
-					<div class="item">
-						<div class="col-lg-3 col-md-3 hidden-sm hidden-xs block-1">
-							<img src="images/package.jpg">
-						</div>
-						<div class="col-lg-3 col-md-3 col-sm-12 text-left block-2">
-							<h3>Календари</h3>
-							<hr/>
-							<ul class="modLi">
-								<li>квартальные</li>
-								<li>настенные</li>
-								<li>настольные</li>
-								<li>и др.</li>
-							</ul>
-						</div>
-						<div class="col-lg-3 col-md-3 col-sm-12 block-3">
-							<img src="images/calendar.jpg">
-						</div>
-						<div class="col-lg-3 col-md-3 hidden-sm hidden-xs block-4">
-							<img src="images/reklamaa.jpg">
-						</div>
-					</div>
+          <!-- Wrapper for slides -->
+          <div class="carousel-inner container-fluid" role="listbox">
 
-					<div class="item">
-						<div class="col-lg-3 col-md-3 hidden-sm hidden-xs block-1">
-							<img src="images/calendar.jpg">
-						</div>
-						<div class="col-lg-3 col-md-3 col-sm-12 text-left block-2">
-							<h3>Рекламно–информационная <br>продукция</h3>
-							<hr/>
-							<ul class="modLi">
-								<li>Листовки, флаера</li>
-								<li>Буклеты</li>
-								<li>Плакаты </li>
-								<li>Открытки</li>
-								<li>Папки</li>
-								<li>Наклейки, стикеры</li>
-								<li>Фирменные бланки</li>
-								<li>Блокноты</li>
-								<li>Каталоги, брошюры</li>
-								<li>и др.</li>
-							</ul>
-						</div>
-						<div class="col-lg-3 col-md-3 col-sm-12 block-3">
-							<img src="images/reklamaa.jpg">
-						</div>
-						<div class="col-lg-3 col-md-3 hidden-sm hidden-xs block-4">
-							<img src="images/eetc.jpg">
-						</div>
+            <div class="item active">
 
-					</div>
+              <div class="col-lg-3 col-md-3 col-sm-3 hidden-sm hidden-xs block-1">
+                <img src="images/eetc.jpg">
+              </div>
+              <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 text-left block-2">
+                <h3>Картонная упаковка<br class="visible-xs"/>
+                  любой сложности</h3>
+                <hr/>
+                <p>Данный вид полиграфической продукции может иметь большое количество комбинаций технических параметров, поэтому его сложно стандартизировать по материалам, размерам и другим параметрам.
+                  <p>Исходя из этого, мы рекомендуем просчитывать стоимость продукции индивидуально, в соответствии с Вашими пожеланиями.</p>
+                  <p>Мы не продаем готовую продукцию со склада! Мы производим продукцию, в соответствии с ее техническими параметрами, индивидуально для каждого Партнера!</p>
+                  <p>
+                    <b>Для просчета стоимости заказа необходимо указать следующие данные:</b>
+                  </p>
+                  <ul>
+                    <li>Формат</li>
+                    <li>Красочность</li>
+                    <li>Плотность и вид картона</li>
+                    <li>Дополнительная отделка</li>
+                    <li>Тираж</li>
+                  </ul>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 block-3">
+                  <img src="images/package.jpg">
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-3 hidden-sm hidden-xs block-4">
+                  <img src="images/calendar.jpg">
+                </div>
+              </div>
 
-					<div class="item">
-						<div class="col-lg-3 col-md-3 hidden-sm hidden-xs block-1">
-							<img src="images/reklamaa.jpg">
-						</div>
-						<div class="col-lg-3 col-md-3 col-sm-12 text-left block-2">
-							<h3>Другое</h3>
-							<hr/>
-							<p>В процессе наполнения</p>
-						</div>
-						<div class="col-lg-3 col-md-3 col-sm-12 block-3">
-							<img src="images/eetc.jpg">
-						</div>
-						<div class="col-lg-3 col-md-3 hidden-sm hidden-xs block-4">
-							<img src="images/package.jpg">
-						</div>
+              <div class="item">
+                <div class="col-lg-3 col-md-3 hidden-sm hidden-xs block-1">
+                  <img src="images/package.jpg">
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-12 text-left block-2">
+                  <h3>Календари</h3>
+                  <hr/>
+                  <ul class="modLi">
+                    <li>квартальные</li>
+                    <li>настенные</li>
+                    <li>настольные</li>
+                    <li>и др.</li>
+                  </ul>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-12 block-3">
+                  <img src="images/calendar.jpg">
+                </div>
+                <div class="col-lg-3 col-md-3 hidden-sm hidden-xs block-4">
+                  <img src="images/reklamaa.jpg">
+                </div>
+              </div>
 
-					</div>
-				</div>
-			</div>
-		</section>
+              <div class="item">
+                <div class="col-lg-3 col-md-3 hidden-sm hidden-xs block-1">
+                  <img src="images/calendar.jpg">
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-12 text-left block-2">
+                  <h3>Рекламно–информационная
+                    <br>продукция</h3>
+                  <hr/>
+                  <ul class="modLi">
+                    <li>Листовки, флаера</li>
+                    <li>Буклеты</li>
+                    <li>Плакаты
+                    </li>
+                    <li>Открытки</li>
+                    <li>Папки</li>
+                    <li>Наклейки, стикеры</li>
+                    <li>Фирменные бланки</li>
+                    <li>Блокноты</li>
+                    <li>Каталоги, брошюры</li>
+                    <li>и др.</li>
+                  </ul>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-12 block-3">
+                  <img src="images/reklamaa.jpg">
+                </div>
+                <div class="col-lg-3 col-md-3 hidden-sm hidden-xs block-4">
+                  <img src="images/eetc.jpg">
+                </div>
 
-		<!--           PARTNERS-section-->
+              </div>
 
-		<section class="partners-section">
-			<div class="container center">
-				<h1>НАШИ ПАРТНЕРЫ</h1>
-				<hr/>
-				<div class="row">
-					<div class="partners-bord-top col-lg-2 col-md-2 col-sm-4 col-xs-3"><img src="images/partners/logo_mono-01.jpg"></div>
-					<div class="partners-bord-top col-lg-2 col-md-2 col-sm-4 col-xs-3"><img src="images/partners/logo_mono-02.jpg"></div>
-					<div class="partners-bord-top col-lg-2 col-md-2 col-sm-4 col-xs-3"><img src="images/partners/logo_mono-03.jpg"></div>
-					<div class="partners-bord-top col-lg-2 col-md-2 col-sm-4 col-xs-3"><img src="images/partners/logo_mono-04.jpg"></div>
-					<div class="partners-bord-top col-lg-2 col-md-2 col-sm-4 col-xs-3"><img src="images/partners/logo_mono-05.jpg"></div>
-					<div class="partners-bord-top col-lg-2 col-md-2 col-sm-4 col-xs-3" style="border-right:none;"><img src="images/partners/logo_mono-06.jpg"></div>
-					<div class="partners-bord-bot col-lg-2 col-md-2 col-sm-4 col-xs-3"><img src="images/partners/logo_mono-07.jpg"></div>
-					<div class="partners-bord-bot col-lg-2 col-md-2 col-sm-4 col-xs-3"><img src="images/partners/logo_mono-08.jpg"></div>
-					<div class="partners-bord-bot col-lg-2 col-md-2 col-sm-4 col-xs-3"><img src="images/partners/logo_mono-09.jpg"></div>
-					<div class="partners-bord-bot col-lg-2 col-md-2 col-sm-4 col-xs-3"><img src="images/partners/logo_mono-10.jpg"></div>
-					<div class="partners-bord-bot col-lg-2 col-md-2 col-sm-4 col-xs-3"><img src="images/partners/logo_mono-11.jpg"></div>
-					<div class="partners-bord-bot col-lg-2 col-md-2 col-sm-4 col-xs-3" style="border-right:none;"><img src="images/partners/logo_mono-12.jpg"></div>
-				</div>
-			</div>
-		</section>
+              <div class="item">
+                <div class="col-lg-3 col-md-3 hidden-sm hidden-xs block-1">
+                  <img src="images/reklamaa.jpg">
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-12 text-left block-2">
+                  <h3>Другое</h3>
+                  <hr/>
+                  <p>В процессе наполнения</p>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-12 block-3">
+                  <img src="images/eetc.jpg">
+                </div>
+                <div class="col-lg-3 col-md-3 hidden-sm hidden-xs block-4">
+                  <img src="images/package.jpg">
+                </div>
 
-		<!--           CONTACT-SECTION-->
+              </div>
+            </div>
+          </div>
+        </section>
 
-		<section class="contact-section">
-			<div class="container center">
-				<h1>Контакты</h1>
-				<div class="row">
-					<div class="col-lg-6 col-md-6 col-sm-6">
-						<iframe class="hidden-xs" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3871.873216127901!2d32.655389173264275!3d46.66966064874642!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40c410242328fc3f%3A0xc62d7c55ccb4c81c!2z0LLRg9C7LiDQnNCw0YLRgNC-0YHQsCDQl9Cw0LvRltC30L3Rj9C60LAsIDMsINCl0LXRgNGB0L7QvSwg0KXQtdGA0YHQvtC90YHRjNC60LAg0L7QsdC70LDRgdGC0YwsINCj0LrRgNCw0LjQvdCw!5e0!3m2!1sru!2sua!4v1454102034303" width="100%" height="304" frameborder="0" style="border:0" allowfullscreen></iframe>
-					</div>
-					<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 custom-form">
-						<form role="form" method="post" action="/send.php" id="contact_form">
-							<div class="form-group">
-								<input type="text" class="form-control" id="name" name="name" placeholder="Имя*" required/>
-							</div>
-							<div class="form-group">
-								<input type="text" class="form-control" id="number" name="number" placeholder="Номер*" />
-							</div>
-							<div class="form-group">
-								<input type="text" class="form-control" id="email" name="email" placeholder="E-mail*" required/>
-							</div>
-							<div class="form-group hidden-xs">
-								<textarea class="form-control" id="message" name="message" rows="5" placeholder="Ваше сообщение" required></textarea>
-							</div>
-							<div class="form-group visible-xs">
-								<textarea class="form-control" id="message" name="message" rows="2" placeholder="Ваше сообщение" required></textarea>
-							</div>
-							<div class="col-lg-6 col-md-6 col-sm-12 col-lg-push-6 col-md-push-6">
-								<!--                                <input type="submit" value="ОТПРАВИТЬ">-->
+        <!--           PARTNERS-section-->
 
-								<button id="button-send" class="btn btn-contact">
-									Отправить
-								</button>
-								<div id="success">
-									Мы с вами свяжемся в скором времени.
-								</div>
-								<div id="error">
-									Уп-с, попробуйте еще раз.
-								</div>
+        <section class="partners-section section">
+          <div class="container center">
+            <h1>НАШИ ПАРТНЕРЫ</h1>
+            <hr/>
+            <div class="row">
+              <div class="partners-bord-top col-lg-2 col-md-2 col-sm-4 col-xs-3"><img src="images/partners/logo_mono-01.jpg"></div>
+              <div class="partners-bord-top col-lg-2 col-md-2 col-sm-4 col-xs-3"><img src="images/partners/logo_mono-02.jpg"></div>
+              <div class="partners-bord-top col-lg-2 col-md-2 col-sm-4 col-xs-3"><img src="images/partners/logo_mono-03.jpg"></div>
+              <div class="partners-bord-top col-lg-2 col-md-2 col-sm-4 col-xs-3"><img src="images/partners/logo_mono-04.jpg"></div>
+              <div class="partners-bord-top col-lg-2 col-md-2 col-sm-4 col-xs-3"><img src="images/partners/logo_mono-05.jpg"></div>
+              <div class="partners-bord-top col-lg-2 col-md-2 col-sm-4 col-xs-3" style="border-right:none;"><img src="images/partners/logo_mono-06.jpg"></div>
+              <div class="partners-bord-bot col-lg-2 col-md-2 col-sm-4 col-xs-3"><img src="images/partners/logo_mono-07.jpg"></div>
+              <div class="partners-bord-bot col-lg-2 col-md-2 col-sm-4 col-xs-3"><img src="images/partners/logo_mono-08.jpg"></div>
+              <div class="partners-bord-bot col-lg-2 col-md-2 col-sm-4 col-xs-3"><img src="images/partners/logo_mono-09.jpg"></div>
+              <div class="partners-bord-bot col-lg-2 col-md-2 col-sm-4 col-xs-3"><img src="images/partners/logo_mono-10.jpg"></div>
+              <div class="partners-bord-bot col-lg-2 col-md-2 col-sm-4 col-xs-3"><img src="images/partners/logo_mono-11.jpg"></div>
+              <div class="partners-bord-bot col-lg-2 col-md-2 col-sm-4 col-xs-3" style="border-right:none;"><img src="images/partners/logo_mono-12.jpg"></div>
+            </div>
+          </div>
+        </section>
 
-							</div>
-						</form>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 contact-text iph">
-						<P>г. Херсон</P>
-						<P>ул. Партизана Железняка, 3</P>
-						<P>время работы: с 9:30 до 18:00 (Пн-Пт)</P>
-						<P>e-mail: ps.kherson@gmail.com</P>
-						<P>телефон: +38 (0552) 39 50 38</P>
-						<P>+38 (050) 53 55 184</P>
-					</div>
-					<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 social-icons">
-						<div class="col-lg-8 col-md-8 col-sm-12 col-lg-push-4 col-md-push-4">
-							<a href="https://instagram.com/" target="_blank">
-								<img src="images/inst.png">
-							</a>
-							<a href="https://vk.com/" target="_blank">
-								<img src="images/vk.png">
-							</a>
-							<a href="https://plus.google.com/" target="_blank">
-								<img src="images/gplus.png">
-							</a>
-							<a href="https://www.facebook.com/" target="_blank">
-								<img src="images/fb.png">
-							</a>
-						</div>
-					</div>
-				</div>
-			</div>
-			<footer>
-				<div class="container">
-					<p class="text-muted text-center">2014 © типография “PrintStudio” г. Херсон, ул. П. Железняка, 3
-						<br/> тел.: +38 (0552) 39 50 38, +38 (050) 53 55 184</p>
-				</div>
-			</footer>
-		</section>
+        <!--           CONTACT-SECTION-->
 
-		<!--           MAIN-->
-	</main>
+        <section class="contact-section section">
+          <div class="container center">
+            <h1>Контакты</h1>
+            <div class="row">
+              <div class="col-lg-6 col-md-6 col-sm-6">
+                <iframe class="hidden-xs" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3871.873216127901!2d32.655389173264275!3d46.66966064874642!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40c410242328fc3f%3A0xc62d7c55ccb4c81c!2z0LLRg9C7LiDQnNCw0YLRgNC-0YHQsCDQl9Cw0LvRltC30L3Rj9C60LAsIDMsINCl0LXRgNGB0L7QvSwg0KXQtdGA0YHQvtC90YHRjNC60LAg0L7QsdC70LDRgdGC0YwsINCj0LrRgNCw0LjQvdCw!5e0!3m2!1sru!2sua!4v1454102034303" width="100%" height="304" frameborder="0" style="border:0" allowfullscreen></iframe>
+              </div>
+              <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 custom-form">
+                <form role="form" method="post" action="/send.php" id="contact_form">
+                  <div class="form-group">
+                    <input type="text" class="form-control" id="name" name="name" placeholder="Имя*" required/>
+                  </div>
+                  <div class="form-group">
+                    <input type="text" class="form-control" id="number" name="number" placeholder="Номер*"/>
+                  </div>
+                  <div class="form-group">
+                    <input type="text" class="form-control" id="email" name="email" placeholder="E-mail*" required/>
+                  </div>
+                  <div class="form-group hidden-xs">
+                    <textarea class="form-control" id="message" name="message" rows="5" placeholder="Ваше сообщение" required></textarea>
+                  </div>
+                  <div class="form-group visible-xs">
+                    <textarea class="form-control" id="message" name="message" rows="2" placeholder="Ваше сообщение" required></textarea>
+                  </div>
+                  <div class="col-lg-6 col-md-6 col-sm-12 col-lg-push-6 col-md-push-6">
+                    <!--                                <input type="submit" value="ОТПРАВИТЬ">-->
 
-</body>
+                    <button id="button-send" class="btn btn-contact">
+                      Отправить
+                    </button>
+                    <div id="success">
+                      Мы с вами свяжемся в скором времени.
+                    </div>
+                    <div id="error">
+                      Уп-с, попробуйте еще раз.
+                    </div>
 
-</html>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 contact-text iph">
+                <P>г. Херсон</P>
+                <P>ул. Партизана Железняка, 3</P>
+                <P>время работы: с 9:30 до 18:00 (Пн-Пт)</P>
+                <P>e-mail: ps.kherson@gmail.com</P>
+                <P>телефон: +38 (0552) 39 50 38</P>
+                <P>+38 (050) 53 55 184</P>
+              </div>
+              <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 social-icons">
+                <div class="col-lg-8 col-md-8 col-sm-12 col-lg-push-4 col-md-push-4">
+                  <a href="https://instagram.com/" target="_blank">
+                    <img src="images/inst.png">
+                  </a>
+                  <a href="https://vk.com/" target="_blank">
+                    <img src="images/vk.png">
+                  </a>
+                  <a href="https://plus.google.com/" target="_blank">
+                    <img src="images/gplus.png">
+                  </a>
+                  <a href="https://www.facebook.com/" target="_blank">
+                    <img src="images/fb.png">
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <footer>
+            <div class="container">
+              <p class="text-muted text-center">2014 © типография “PrintStudio” г. Херсон, ул. П. Железняка, 3
+                <br/>
+                тел.: +38 (0552) 39 50 38, +38 (050) 53 55 184</p>
+            </div>
+          </footer>
+        </section>
+
+        <!--           MAIN-->
+      </div>
+
+    </body>
+
+  </html>
