@@ -213,7 +213,7 @@ html.fp-enabled,
   height: 4px;
   width: 4px;
   border: 0;
-  background: #333;
+  background: #29b0aa;
   left: 50%;
   top: 50%;
   margin: -2px 0 0 -2px;
@@ -710,7 +710,7 @@ body {
 }
 
 .img3 .service-inside-center {
-  top: 16%;
+  top: 17%;
 }
 
 .img4 {
@@ -722,7 +722,7 @@ body {
 }
 
 .img4 .service-inside-center {
-  top: 33%;
+  top: 34%;
 }
 
 .img1:hover,
@@ -1096,12 +1096,52 @@ footer {
   footer {
     display: none !important;
   }
-  .onepage-pagination {
+  #fp-nav {
     display: none;
   }
 }
 
 /* Small devices (tablets, 768px and up) */
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .main-section .header h1 {
+    font-size: 15vw;
+  }
+  .main-section .header h2 {
+    font-size: 3vw;
+  }
+  .main-section .header h3 {
+    font-size: 1.5vw;
+  }
+  .main-section .header hr {
+    border: 3px solid #1cbbb4;
+    width: 30vw;
+  }
+  .main-section .header img {
+    width: 15vh;
+  }
+  .services-section .service-inside-center {
+    top: 25%;
+  }
+  .services-section hr {
+    width: 15vw;
+    border: 1.5px solid;
+  }
+  .services-section h1 {
+    font-size: 4vw;
+    text-transform: uppercase;
+  }
+  .services-section h4 {
+    font-size: 1.5vh;
+    text-transform: uppercase;
+  }
+  .services-section .container {
+    padding: 0;
+  }
+  .partners-section .col-sm-4 {
+    padding: 2vw 0vh 2vh 0vh !important;
+  }
+}
+
 /* Medium devices (desktops, 992px and up) */
 @media screen and (min-width: 992px) and (max-width: 1279px) {
   .services-section .img1,

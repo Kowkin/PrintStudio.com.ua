@@ -329,59 +329,59 @@
     	footer {
     		display: none!important;
     	}
-    	.onepage-pagination {
+    	#fp-nav {
     		display: none;
     	}
     }
     /* Small devices (tablets, 768px and up) */
 //    
-//    @media screen and (min-width: 768px) and (max-width:992px) {
-//    	.main-section {
-//    		.header {
-//    			h1 {
-//    				font-size: 15vw;
-//    			}
-//    			h2 {
-//    				font-size: 3vw;
-//    			}
-//    			h3 {
-//    				font-size: 1.5vw;
-//    			}
-//    			hr {
-//    				border: 3px solid #1cbbb4;
-//    				width: 30vw;
-//    			}
-//    			img {
-//    				width: 15vh;
-//    			}
-//    		}
-//    	}
-//    	.services-section {
-//    		.service-inside-center {
-//    			top: 25%;
-//    		}
-//    		hr {
-//    			width: 15vw;
-//    			border: 1.5px solid;
-//    		}
-//    		h1 {
-//    			font-size: 4vw;
-//    			text-transform: uppercase;
-//    		}
-//    		h4 {
-//    			font-size: 1.5vh;
-//    			text-transform: uppercase;
-//    		}
-//    		.container {
-//    			padding: 0;
-//    		}
-//    	}
-//    	.partners-section {
-//    		.col-sm-4 {
-//    			padding: 2vw 0vh 2vh 0vh!important;
-//    		}
-//    	}
-//    }
+    @media screen and (min-width: 768px) and (max-width:992px) {
+    	.main-section {
+    		.header {
+    			h1 {
+    				font-size: 15vw;
+    			}
+    			h2 {
+    				font-size: 3vw;
+    			}
+    			h3 {
+    				font-size: 1.5vw;
+    			}
+    			hr {
+    				border: 3px solid #1cbbb4;
+    				width: 30vw;
+    			}
+    			img {
+    				width: 15vh;
+    			}
+    		}
+    	}
+    	.services-section {
+    		.service-inside-center {
+    			top: 25%;
+    		}
+    		hr {
+    			width: 15vw;
+    			border: 1.5px solid;
+    		}
+    		h1 {
+    			font-size: 4vw;
+    			text-transform: uppercase;
+    		}
+    		h4 {
+    			font-size: 1.5vh;
+    			text-transform: uppercase;
+    		}
+    		.container {
+    			padding: 0;
+    		}
+    	}
+    	.partners-section {
+    		.col-sm-4 {
+    			padding: 2vw 0vh 2vh 0vh!important;
+    		}
+    	}
+    }
     /* Medium devices (desktops, 992px and up) */
     
     @media screen and (min-width: 992px) and (max-width:1279px) {
