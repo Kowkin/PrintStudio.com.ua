@@ -41,14 +41,14 @@
           css3: true,
           scrollingSpeed: 800,
           autoScrolling: true,
-          fitToSection: true,
-          fitToSectionDelay: 2000,
+          // fitToSection: true,
+          // fitToSectionDelay: 500,
           easing: 'easeInOutCubic',
           easingcss3: 'ease',
-          loopHorizontal: true,
-          continuousVertical: true,
-          touchSensitivity: 15,
-          normalScrollElementTouchThreshold: 5,
+          // loopHorizontal: true,
+          // continuousVertical: true,
+          touchSensitivity: 10,
+          normalScrollElementTouchThreshold: 3,
 
           //Accessibility
           keyboardScrolling: true,
@@ -56,14 +56,13 @@
           recordHistory: true,
 
           //Custom selectors
-          sectionSelector: 'section',
+          sectionSelector: 'section'
         });
         $('.carousel').carousel({interval: false});
         $(document).on('click', '#moveTo', function() {
           $.fn.fullpage.moveTo('products');
         });
       });
-
     </script>
   </head>
 
@@ -432,10 +431,7 @@
             </div>
           </footer>
         </section>
-
         <!--           MAIN-->
       </div>
-
     </body>
-
   </html>
