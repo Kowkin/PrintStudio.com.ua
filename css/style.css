@@ -659,12 +659,20 @@ body {
   transition: all 2s ease;
 }
 
+.img1 .service-inside-center {
+  top: 32.5%;
+}
+
 .img2 {
   background: url(/images/offset.png);
   background-size: 100%;
   height: 50vh;
   width: 100%;
   transition: all 2s ease;
+}
+
+.img2 .service-inside-center {
+  top: 32.5%;
 }
 
 .img3 {
@@ -676,7 +684,7 @@ body {
 }
 
 .img3 .service-inside-center {
-  top: 17%;
+  top: 32.5%;
 }
 
 .img4 {
@@ -1201,10 +1209,10 @@ footer {
     font-size: 1.4vw;
   }
   .services-section .img3 .service-inside-center {
-    top: 13%;
+    top: 30.5%;
   }
   .services-section .img4 .service-inside-center {
-    top: 32.5%;
+    top: 30.5%;
   }
   .services-section .service-inside-center {
     position: inherit;
