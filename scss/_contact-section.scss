@@ -72,7 +72,49 @@ footer {
 .social-icons {
     padding-top: 68px;
     padding-right: 200px;
-    img {
-        padding-left: 25px
+    .vk, .inst, .gplus, .fb{
+        height: 57px;
+        width: 57px;
+        float: left;
+        margin-left: 25px;
+        transition: all 1s;
+        &:hover {
+            height: 57px;
+            width: 57px;
+            background-size: 100%;
+            transition: all 1s;
+        }
+    }
+    .vk {
+        background: url(/images/socicon/vk.jpg) no-repeat;
+        background-size: 100%;
+        &:hover {
+            background: url(/images/socicon/vkhover.jpg) no-repeat;
+            background-size: 100%;
+        }
+    }
+    .inst {
+        background: url(/images/socicon/inst.jpg) no-repeat;
+        background-size: 100%;
+        &:hover {
+            background: url(/images/socicon/insthover.jpg) no-repeat;
+            background-size: 100%;
+        }
+    }
+    .gplus {
+        background: url(/images/socicon/gplus.jpg) no-repeat;
+        background-size: 100%;
+        &:hover {
+            background: url(/images/socicon/gplushover.jpg) no-repeat;
+            background-size: 100%;
+        }
+    }
+    .fb {
+        background: url(/images/socicon/fb.jpg) no-repeat;
+        background-size: 100%;
+        &:hover {
+            background: url(/images/socicon/fbhover.jpg) no-repeat;
+            background-size: 100%;
+        }
     }
 }

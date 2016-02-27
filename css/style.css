@@ -917,8 +917,59 @@ footer {
   padding-right: 200px;
 }
 
-.social-icons img {
-  padding-left: 25px;
+.social-icons .vk, .social-icons .inst, .social-icons .gplus, .social-icons .fb {
+  height: 57px;
+  width: 57px;
+  float: left;
+  margin-left: 25px;
+  transition: all 1s;
+}
+
+.social-icons .vk:hover, .social-icons .inst:hover, .social-icons .gplus:hover, .social-icons .fb:hover {
+  height: 57px;
+  width: 57px;
+  background-size: 100%;
+  transition: all 1s;
+}
+
+.social-icons .vk {
+  background: url(/images/socicon/vk.jpg) no-repeat;
+  background-size: 100%;
+}
+
+.social-icons .vk:hover {
+  background: url(/images/socicon/vkhover.jpg) no-repeat;
+  background-size: 100%;
+}
+
+.social-icons .inst {
+  background: url(/images/socicon/inst.jpg) no-repeat;
+  background-size: 100%;
+}
+
+.social-icons .inst:hover {
+  background: url(/images/socicon/insthover.jpg) no-repeat;
+  background-size: 100%;
+}
+
+.social-icons .gplus {
+  background: url(/images/socicon/gplus.jpg) no-repeat;
+  background-size: 100%;
+}
+
+.social-icons .gplus:hover {
+  background: url(/images/socicon/gplushover.jpg) no-repeat;
+  background-size: 100%;
+}
+
+.social-icons .fb {
+  background: url(/images/socicon/fb.jpg) no-repeat;
+  background-size: 100%;
+}
+
+.social-icons .fb:hover {
+  background: url(/images/socicon/fbhover.jpg) no-repeat;
+  background-size: 100%;
 }
 
 /* Mobile devices */
@@ -1048,10 +1099,23 @@ footer {
   .contact-section .social-icons {
     padding-top: 3vh !important;
   }
-  .contact-section .social-icons img {
-    padding-left: 1vw;
-    height: 9.5vh;
-    width: 10vh;
+  .contact-section .social-icons .vk,
+  .contact-section .social-icons .inst,
+  .contact-section .social-icons .gplus,
+  .contact-section .social-icons .fb {
+    height: 16vw;
+    width: 16vw;
+    margin-left: 5vw;
+  }
+  .contact-section .social-icons .vk:hover,
+  .contact-section .social-icons .inst:hover,
+  .contact-section .social-icons .gplus:hover,
+  .contact-section .social-icons .fb:hover {
+    height: 16vw;
+    width: 16vw;
+  }
+  .contact-section .social-icons > col-xs-12 {
+    padding: 0 !important;
   }
   footer {
     display: none !important;
@@ -1137,11 +1201,6 @@ footer {
   .contact-section .social-icons {
     padding-top: 2vh !important;
     padding: 0;
-  }
-  .contact-section .social-icons img {
-    padding-left: 1vw;
-    height: 5vw;
-    width: 6vw;
   }
   footer {
     height: 100px !important;
