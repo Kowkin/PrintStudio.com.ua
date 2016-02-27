@@ -70,14 +70,6 @@
 	bottom: 0;
 	-webkit-backface-visibility: hidden;
 	backface-visibility: hidden;
-	&:after {
-		content: ' ';
-		background-color: rgba(0, 0, 0, .5);
-		height: 100%;
-		position: absolute;
-		transition-duration: 1s;
-		width: 100%;
-	}
 	video {
 		position: absolute;
 		top: 0;

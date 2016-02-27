@@ -584,15 +584,6 @@ body {
   backface-visibility: hidden;
 }
 
-.bg-video:after {
-  content: ' ';
-  background-color: rgba(0, 0, 0, 0.5);
-  height: 100%;
-  position: absolute;
-  transition-duration: 1s;
-  width: 100%;
-}
-
 .bg-video video {
   position: absolute;
   top: 0;
