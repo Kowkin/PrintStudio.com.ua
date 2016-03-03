@@ -1,5 +1,5 @@
     /* Mobile devices */
-    
+
     @media screen and (max-width: 580px) {
         //    NAV
         .cd-primary-nav {
@@ -167,149 +167,129 @@
         }
     }
     /* Small devices (tablets, 768px and up) */
-    
+
     //
-    @media screen and (min-width: 768px) and (max-width:992px) {
-        .main-section {
-            .header {
-                h1 {
-                    font-size: 15vw;
-                }
-                h2 {
-                    font-size: 3vw;
-                }
-                h3 {
-                    font-size: 1.5vw;
-                }
-                hr {
-                    border: 3px solid #1cbbb4;
-                    width: 30vw;
-                }
-                img {
-                    width: 15vh;
-                }
-            }
-        }
-        .services-section {
-            .service-inside-center {
-                top: 25%;
-            }
-            hr {
-                width: 15vw;
-                border: 1.5px solid;
-            }
-            h1 {
-                font-size: 4vw;
-                text-transform: uppercase;
-            }
-            h4 {
-                font-size: 1.5vh;
-                text-transform: uppercase;
-            }
-            .container {
-                padding: 0;
-            }
-        }
-        .partners-section {
-            .col-sm-4 {
-                padding: 2vw 0vh 2vh 0vh!important;
-            }
-        }
-    }
-    /* Medium devices (desktops, 992px and up) */
-    
-    @media screen and (min-width: 992px) and (max-width:1279px) {
-        .services-section {
-            .img1,
-            .img2,
-            .img3,
-            .img4 {
-                height: 40vh;
-            }
-            .img4 {
-                .service-inside-center {
-                    top: 30%;
-                }
-            }
-        }
-        .products-section {
-            .block-2 {
-                padding: 0 10px!important;
-            }
-            h3 {
-                font-size: 2.1vw;
-                margin-top: -2px!important;
-            }
-            p {
-                font-size: 1.5vh;
-            }
-            .modLi li {
-                font-size: 2.2vh;
-            }
-        }
-        .contact-section {
-            h1 {
-                font-size: 5vw;
-                padding-bottom: 0;
-                padding-top: 3vh;
-            }
-            p {
-                font-size: 2vh;
-            }
-            .social-icons {
-                padding-top: 2vh!important;
-                padding: 0;
-            }
-        }
-        footer {
-            height: 100px!important;
-        }
-    }
-    /* Large devices (large desktops, 1200px and up) */
-    
-    @media screen and (min-width: 1280px) {
-        .viewing-page-1 .cd-header {
-            opacity: 0;
-            transition-delay: 5s;
-            transition: opacity 0.6s ease-out;
-        }
-        .viewing-page-2 .cd-header,
-        .viewing-page-3 .cd-header,
-        .viewing-page-4 .cd-header,
-        .viewing-page-5 .cd-header,
-        {
-            opacity: 1;
-            transition: opacity 1s ease;
-        }
-        .carousel-wrapper {
-            left: 45.2vw;
-        }
-        .contact-section .text-center {
-            margin-top: 4vh;
-        }
-        .img4 {
-            .service-inside-center {
-                top: 32.5%;
-            }
-        }
-        .products-section {
-            h3 {
-                margin-top: -3.5px;
-                font-size: 3vh;
-            }
-            p {
-                font-size: 1.65vh;
-            }
-        }
-        footer {
-            height: 130px;
-            transition-delay: 4s;
-            transition: all 1s ease-in-out;
-        }
-    }
-    
+    // @media screen and (min-width: 768px) and (max-width:992px) {
+    //     .main-section {
+    //         .header {
+    //             h1 {
+    //                 font-size: 15vw;
+    //             }
+    //             h2 {
+    //                 font-size: 3vw;
+    //             }
+    //             h3 {
+    //                 font-size: 1.5vw;
+    //             }
+    //             hr {
+    //                 border: 3px solid #1cbbb4;
+    //                 width: 30vw;
+    //             }
+    //             img {
+    //                 width: 15vh;
+    //             }
+    //         }
+    //     }
+    //     .services-section {
+    //         .service-inside-center {
+    //             top: 25%;
+    //         }
+    //         hr {
+    //             width: 15vw;
+    //             border: 1.5px solid;
+    //         }
+    //         h1 {
+    //             font-size: 4vw;
+    //             text-transform: uppercase;
+    //         }
+    //         h4 {
+    //             font-size: 1.5vh;
+    //             text-transform: uppercase;
+    //         }
+    //         .container {
+    //             padding: 0;
+    //         }
+    //     }
+    //     .partners-section {
+    //         .col-sm-4 {
+    //             padding: 2vw 0vh 2vh 0vh!important;
+    //         }
+    //     }
+    // }
+    // /* Medium devices (desktops, 992px and up) */
+    //
+    // @media screen and (min-width: 992px) and (max-width:1279px) {
+    //     .services-section {
+    //         .img1,
+    //         .img2,
+    //         .img3,
+    //         .img4 {
+    //             height: 40vh;
+    //         }
+    //         .img4 {
+    //             .service-inside-center {
+    //                 top: 30%;
+    //             }
+    //         }
+    //     }
+    //     .products-section {
+    //         .block-2 {
+    //             padding: 0 10px!important;
+    //         }
+    //         h3 {
+    //             font-size: 2.1vw;
+    //             margin-top: -2px!important;
+    //         }
+    //         p {
+    //             font-size: 1.5vh;
+    //         }
+    //         .modLi li {
+    //             font-size: 2.2vh;
+    //         }
+    //     }
+    //     .contact-section {
+    //         h1 {
+    //             font-size: 5vw;
+    //             padding-bottom: 0;
+    //             padding-top: 3vh;
+    //         }
+    //         p {
+    //             font-size: 2vh;
+    //         }
+    //         .social-icons {
+    //             padding-top: 2vh!important;
+    //             padding: 0;
+    //         }
+    //     }
+    //     footer {
+    //         height: 100px!important;
+    //     }
+    // }
+    // /* Large devices (large desktops, 1200px and up) */
+    //
+    // @media screen and (min-width: 1200px) {
+    //     .carousel-wrapper {
+    //         left: 45.2vw;
+    //     }
+    //
+    //     .img4 {
+    //         .service-inside-center {
+    //             top: 32.5%;
+    //         }
+    //     }
+    //     .products-section {
+    //         h3 {
+    //             margin-top: -6.5px;
+    //         }
+    //     }
+    //     footer {
+    //         transition-delay: 4s;
+    //         transition: all 1s ease-in-out;
+    //     }
+    // }
+
     @media (device-aspect-ratio: 1366/768),
-    (device-aspect-ratio: 1366/768) {
+    (device-aspect-ratio: 1360/768) {
         .cd-primary-nav {
             height: auto;
             padding-top: 10%!important;

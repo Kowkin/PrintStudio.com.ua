@@ -602,13 +602,12 @@ body {
   bottom: 0;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
-  background: url(/images/print.jpg) no-repeat center;
+  background: url(/images/print.jpg) no-repeat;
   background-size: cover;
 }
 
 .services-section {
   color: white;
-  background: linear-gradient(#000 75%, #29b0aa 75%, #29b0aa 76.5%, #fff 15%);
 }
 
 .services-section .onepagescroll {
@@ -646,7 +645,6 @@ body {
   background: url(/images/pack.png);
   background-size: 100%;
   height: 50vh;
-  width: 100%;
   transition: all 2s ease;
 }
 
@@ -700,7 +698,7 @@ body {
 
 .products-section .container-fluid {
   padding: 0;
-  height: 60vh;
+  height: 70vh;
 }
 
 .products-section hr {
@@ -712,12 +710,15 @@ body {
 }
 
 .products-section h3 {
-  font-size: 3.5vh;
+  font-size: 2vw;
   font-weight: 700;
   margin: 0;
   text-transform: uppercase;
-  line-height: 1.1;
-  margin-top: -6.5px;
+  line-height: 1;
+}
+
+.products-section p {
+  font-size: 1.1vw;
 }
 
 .products-section .block-1 {
@@ -756,7 +757,7 @@ body {
 }
 
 .products-section .block-2 .modLi {
-  font-size: 2vh;
+  font-size: 1.1vw;
 }
 
 .products-section .block-3 {
@@ -792,7 +793,7 @@ body {
   z-index: 99999;
   position: absolute;
   left: 44.1vw;
-  top: 68vh;
+  top: 75vh;
 }
 
 .carousel-wrapper a:nth-child(2) {
@@ -874,26 +875,16 @@ body {
   font-weight: 500 !important;
 }
 
+.text-center {
+  margin-top: 3vh;
+}
+
 footer {
   position: absolute;
   bottom: 0;
   width: 100%;
-  opacity: 1;
-  /* Set the fixed height of the footer here */
-  height: 170px;
+  height: 15vh;
   border-top: 7px solid #1cbbb4;
-  transition: all 1s ease-in-out .4s;
-}
-
-.viewing-page-1 footer,
-.viewing-page-2 footer,
-.viewing-page-3 footer,
-.viewing-page-4 footer {
-  opacity: 0;
-  -webkit-transform: translateY(170px);
-      -ms-transform: translateY(170px);
-          transform: translateY(170px);
-  transition: all 1s ease-in-out;
 }
 
 .contact-section {
@@ -1126,125 +1117,7 @@ footer {
 }
 
 /* Small devices (tablets, 768px and up) */
-@media screen and (min-width: 768px) and (max-width: 992px) {
-  .main-section .header h1 {
-    font-size: 15vw;
-  }
-  .main-section .header h2 {
-    font-size: 3vw;
-  }
-  .main-section .header h3 {
-    font-size: 1.5vw;
-  }
-  .main-section .header hr {
-    border: 3px solid #1cbbb4;
-    width: 30vw;
-  }
-  .main-section .header img {
-    width: 15vh;
-  }
-  .services-section .service-inside-center {
-    top: 25%;
-  }
-  .services-section hr {
-    width: 15vw;
-    border: 1.5px solid;
-  }
-  .services-section h1 {
-    font-size: 4vw;
-    text-transform: uppercase;
-  }
-  .services-section h4 {
-    font-size: 1.5vh;
-    text-transform: uppercase;
-  }
-  .services-section .container {
-    padding: 0;
-  }
-  .partners-section .col-sm-4 {
-    padding: 2vw 0vh 2vh 0vh !important;
-  }
-}
-
-/* Medium devices (desktops, 992px and up) */
-@media screen and (min-width: 992px) and (max-width: 1279px) {
-  .services-section .img1,
-  .services-section .img2,
-  .services-section .img3,
-  .services-section .img4 {
-    height: 40vh;
-  }
-  .services-section .img4 .service-inside-center {
-    top: 30%;
-  }
-  .products-section .block-2 {
-    padding: 0 10px !important;
-  }
-  .products-section h3 {
-    font-size: 2.1vw;
-    margin-top: -2px !important;
-  }
-  .products-section p {
-    font-size: 1.5vh;
-  }
-  .products-section .modLi li {
-    font-size: 2.2vh;
-  }
-  .contact-section h1 {
-    font-size: 5vw;
-    padding-bottom: 0;
-    padding-top: 3vh;
-  }
-  .contact-section p {
-    font-size: 2vh;
-  }
-  .contact-section .social-icons {
-    padding-top: 2vh !important;
-    padding: 0;
-  }
-  footer {
-    height: 100px !important;
-  }
-}
-
-/* Large devices (large desktops, 1200px and up) */
-@media screen and (min-width: 1280px) {
-  .viewing-page-1 .cd-header {
-    opacity: 0;
-    transition-delay: 5s;
-    transition: opacity 0.6s ease-out;
-  }
-  .viewing-page-2 .cd-header,
-  .viewing-page-3 .cd-header,
-  .viewing-page-4 .cd-header,
-  .viewing-page-5 .cd-header {
-    opacity: 1;
-    transition: opacity 1s ease;
-  }
-  .carousel-wrapper {
-    left: 45.2vw;
-  }
-  .contact-section .text-center {
-    margin-top: 4vh;
-  }
-  .img4 .service-inside-center {
-    top: 32.5%;
-  }
-  .products-section h3 {
-    margin-top: -3.5px;
-    font-size: 3vh;
-  }
-  .products-section p {
-    font-size: 1.65vh;
-  }
-  footer {
-    height: 130px;
-    transition-delay: 4s;
-    transition: all 1s ease-in-out;
-  }
-}
-
-@media (device-aspect-ratio: 1366 / 768), (device-aspect-ratio: 1366 / 768) {
+@media (device-aspect-ratio: 1366 / 768), (device-aspect-ratio: 1360 / 768) {
   .cd-primary-nav {
     height: auto;
     padding-top: 10% !important;

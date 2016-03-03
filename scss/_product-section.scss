@@ -2,7 +2,7 @@
 .products-section {
     .container-fluid {
         padding: 0;
-        height: 60vh;
+        height: 70vh;
     }
     hr {
         border: 2px solid #29b0aa;
@@ -12,12 +12,14 @@
         padding: 0;
     }
     h3 {
-        font-size: 3.5vh;
+        font-size: 2vw;
         font-weight: 700;
         margin: 0;
         text-transform: uppercase;
-        line-height: 1.1;
-        margin-top: -6.5px;
+        line-height: 1;
+    }
+    p {
+        font-size: 1.1vw;
     }
     .block-1 {
         width: 22vw!important;
@@ -48,7 +50,7 @@
             }
         }
         .modLi{
-            font-size: 2vh;
+            font-size: 1.1vw;
         }
     }
     .block-3 {
@@ -83,9 +85,8 @@
     z-index: 99999;
     position: absolute;
     left: 44.1vw;
-    top: 68vh;
+    top: 75vh;
     a:nth-child(2){
         margin-left: 10px;
     }
 }
-

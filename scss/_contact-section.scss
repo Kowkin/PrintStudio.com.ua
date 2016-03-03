@@ -34,25 +34,16 @@
     line-height: 0.7;
     font-weight: 500!important;
 }
+.text-center {
+    margin-top: 3vh;
+}
 
 footer {
     position: absolute;
     bottom: 0;
     width: 100%;
-    opacity: 1;
-    /* Set the fixed height of the footer here */
-    height: 170px;
+    height: 15vh;
     border-top: 7px solid #1cbbb4;
-    transition: all 1s ease-in-out .4s;
-}
-
-.viewing-page-1 footer,
-.viewing-page-2 footer,
-.viewing-page-3 footer,
-.viewing-page-4 footer {
-    opacity: 0;
-    transform: translateY(170px);
-    transition: all 1s ease-in-out;
 }
 
 .contact-section {

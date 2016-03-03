@@ -1,6 +1,5 @@
 .services-section {
     color: white;
-    background: linear-gradient(#000 75%, #29b0aa 75%, #29b0aa 76.5%, #fff 15%);
     .onepagescroll {
         text-decoration: none;
         color: white;
@@ -33,7 +32,7 @@
     background: url(/images/pack.png);
     background-size: 100%;
     height: 50vh;
-    width: 100%;
+    // width: 100%;
     transition: all 2s ease;
     .service-inside-center{
         top: 32.5%;
