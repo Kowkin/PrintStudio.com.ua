@@ -509,6 +509,15 @@ body {
   padding-right: 0 !important;
 }
 
+.fp-viewing-main .cd-primary-nav-trigger {
+  opacity: 0;
+}
+
+.cd-primary-nav-trigger {
+  opacity: 1;
+  transition: all 1s ease;
+}
+
 .main-nav {
   background-color: #252525;
   position: relative;
@@ -964,7 +973,7 @@ footer {
 }
 
 /* Mobile devices */
-@media screen and (max-width: 580px) {
+@media (max-width: 768px) {
   .cd-primary-nav {
     padding-top: 18vh !important;
   }
@@ -1002,7 +1011,7 @@ footer {
     width: 30vw;
   }
   .main-section hr {
-    margin: 10px auto 10px;
+    margin: 10px auto;
   }
   .services-section h1 {
     font-size: 7vw;
@@ -1074,7 +1083,7 @@ footer {
     border: none;
   }
   .partners-section .col-lg-2 {
-    padding: 2vh 1vw 3vh 1vw;
+    padding: 2vh 1vw 3vh;
   }
   .partners-section .center {
     top: 47%;
@@ -1094,19 +1103,16 @@ footer {
   .contact-section .social-icons .inst,
   .contact-section .social-icons .gplus,
   .contact-section .social-icons .fb {
-    height: 16vw;
-    width: 16vw;
-    margin-left: 5vw;
+    height: 15vw;
+    width: 15vw;
+    margin-left: 6vw;
   }
   .contact-section .social-icons .vk:hover,
   .contact-section .social-icons .inst:hover,
   .contact-section .social-icons .gplus:hover,
   .contact-section .social-icons .fb:hover {
-    height: 16vw;
-    width: 16vw;
-  }
-  .contact-section .social-icons > col-xs-12 {
-    padding: 0 !important;
+    height: 15vw;
+    width: 15vw;
   }
   footer {
     display: none !important;
@@ -1116,6 +1122,63 @@ footer {
   }
 }
 
+@media screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+  .services-section .img1,
+  .services-section .img2,
+  .services-section .img3,
+  .services-section .img4 {
+    background-size: cover;
+  }
+  .products-section h3 {
+    margin-top: 5vh;
+    font-size: 4vw;
+  }
+  .products-section p {
+    font-size: 2vw;
+  }
+  .products-section hr {
+    width: 35vw;
+    margin: 8px 0;
+  }
+  .products-section li {
+    font-size: 2vw;
+  }
+  .products-section .container-fluid {
+    height: 100vh;
+  }
+  .products-section .block-2,
+  .products-section .block-3 {
+    width: 100vw !important;
+    height: 50vh;
+  }
+  .products-section .block-2 img,
+  .products-section .block-3 img {
+    width: 100vw !important;
+  }
+  .products-section .block-2 {
+    padding: 0 15px !important;
+  }
+  .products-section .carousel-wrapper {
+    left: 30vw;
+    top: initial;
+    bottom: 2vh;
+    padding: 0 !important;
+  }
+  .products-section .carousel-wrapper img {
+    height: 18vw;
+    width: 18vw;
+  }
+}
+
+.partners-section .partners-bord-top {
+  border: none;
+}
+
+.partners-section .partners-bord-bot {
+  border: none;
+}
+
+/* Small devices (tablets, 768px and up) */
 /* Small devices (tablets, 768px and up) */
 @media (device-aspect-ratio: 1366 / 768), (device-aspect-ratio: 1360 / 768) {
   .cd-primary-nav {

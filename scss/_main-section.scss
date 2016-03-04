@@ -2,6 +2,13 @@
 .navbar .col-lg-10 {
 	padding-right: 0!important;
 }
+.fp-viewing-main .cd-primary-nav-trigger{
+	opacity:0;
+}
+.cd-primary-nav-trigger{
+	opacity: 1;
+	transition: all 1s ease;
+}
 .main-nav {
 	background-color: #252525;
 	position: relative;
