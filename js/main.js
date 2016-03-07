@@ -2,25 +2,25 @@
 //setup email here
 $(function(){
    $('#button-send').click(function (event) {
-        $('#button-send').html('Sending E-Mail...');
+        $('#button-send').html('Отправка...');
         event.preventDefault();
 
         $.ajax({
             type: 'POST',
-            url: 'send.php',
+            url: '/sendemail.php',
             data: $('#contact_form').serialize(),
             success: function (html) {
                 if (html.success == '1') {
-                    $('#button-send').html('Send E-Mail');
+                    $('#button-send').html('Отправленно');
                     $('#success').show();
                 }
                 else {
-                    $('#button-send').html('Send E-Mail');
+                    $('#button-send').html('Ошибка');
                     $('#error').show();
                 }
             },
             error: function () {
-                $('#button-send').html('Send E-Mail');
+                $('#button-send').html('Ошибка');
                 $('#error').show();
             }
         });

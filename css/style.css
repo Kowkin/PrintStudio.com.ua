@@ -40,8 +40,8 @@ body {
  */
 html.fp-enabled,
 .fp-enabled body {
-  margin: 0;
-  padding: 0;
+  margin: 0 !important;
+  padding: 0 !important;
   overflow: hidden;
   height: 100vh;
   /*Avoid flicker on slides transitions for mobile phones #336 */
@@ -281,6 +281,11 @@ html.fp-enabled,
 .fp-auto-height .fp-slide,
 .fp-auto-height .fp-tableCell {
   height: auto !important;
+}
+
+.fp-responsive .services-section,
+.fp-responsive .services-section .fp-tableCell {
+  height: 50vh !important;
 }
 
 /* -------------------------------- 
@@ -988,9 +993,8 @@ footer {
     right: 0;
     top: 0;
   }
-  .main-section, .services-section, .products-section, .contact-section, .partners-section {
-    min-height: 100vh !important;
-    width: 100vw !important;
+  .main-section, .services-section, .products-section, .partners-section {
+    height: 100vh !important;
   }
   .main-section .header h1 {
     color: #000;
@@ -1127,6 +1131,15 @@ footer {
 }
 
 @media screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+  .cd-primary-nav a {
+    font-size: 4.5vh;
+  }
+  .cd-primary-nav-trigger {
+    width: 62px !important;
+    height: 45px !important;
+    right: 0 !important;
+    top: 3vh;
+  }
   .services-section .img1,
   .services-section .img2,
   .services-section .img3,
@@ -1182,7 +1195,6 @@ footer {
   border: none;
 }
 
-/* Small devices (tablets, 768px and up) */
 /* Small devices (tablets, 768px and up) */
 @media (device-aspect-ratio: 1366 / 768), (device-aspect-ratio: 1360 / 768) {
   .cd-primary-nav {
