@@ -20,7 +20,7 @@ body {
 
 .center {
   margin: 0 auto;
-  width: 100%;
+  width: 100vw;
   text-align: center;
   position: absolute;
   top: 50%;
@@ -43,12 +43,13 @@ html.fp-enabled,
   margin: 0;
   padding: 0;
   overflow: hidden;
+  height: 100vh;
   /*Avoid flicker on slides transitions for mobile phones #336 */
   -webkit-tap-highlight-color: transparent;
 }
 
 #superContainer {
-  height: 100%;
+  height: 100vh;
   position: relative;
   /* Touch detection for Windows 8 */
   -ms-touch-action: none;
@@ -91,7 +92,7 @@ html.fp-enabled,
   display: table-cell;
   vertical-align: middle;
   width: 100%;
-  height: 100%;
+  height: 100vh;
 }
 
 .fp-slidesContainer {
@@ -987,6 +988,10 @@ footer {
     right: 0;
     top: 0;
   }
+  .main-section, .services-section, .products-section, .contact-section, .partners-section {
+    min-height: 100vh !important;
+    width: 100vw !important;
+  }
   .main-section .header h1 {
     color: #000;
     font-weight: 800;
@@ -1046,7 +1051,6 @@ footer {
   .products-section .block-2,
   .products-section .block-3 {
     width: 100vw !important;
-    height: 50vh;
   }
   .products-section .block-2 img,
   .products-section .block-3 img {
